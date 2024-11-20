@@ -1,6 +1,6 @@
+from datetime import datetime, timedelta
 from airflow import DAG
 from airflow.operators.python import PythonOperator
-from datetime import datetime, timedelta
 from scripts.extract import extract_data
 from scripts.transform import transform_data
 from scripts.load import load_data
