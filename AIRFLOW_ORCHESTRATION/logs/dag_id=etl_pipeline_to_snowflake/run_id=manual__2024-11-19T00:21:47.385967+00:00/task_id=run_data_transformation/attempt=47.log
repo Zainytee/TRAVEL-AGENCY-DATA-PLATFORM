@@ -1,0 +1,156 @@
+[2024-11-20T04:34:28.212+0100] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-11-20T04:34:28.241+0100] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_pipeline_to_snowflake.run_data_transformation manual__2024-11-19T00:21:47.385967+00:00 [queued]>
+[2024-11-20T04:34:28.267+0100] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_pipeline_to_snowflake.run_data_transformation manual__2024-11-19T00:21:47.385967+00:00 [queued]>
+[2024-11-20T04:34:28.278+0100] {taskinstance.py:2865} INFO - Starting attempt 47 of 48
+[2024-11-20T04:34:28.380+0100] {taskinstance.py:2888} INFO - Executing <Task(PythonOperator): run_data_transformation> on 2024-11-19 00:21:47.385967+00:00
+[2024-11-20T04:34:28.462+0100] {standard_task_runner.py:72} INFO - Started process 255115 to run task
+[2024-11-20T04:34:28.486+0100] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'etl_pipeline_to_snowflake', 'run_data_transformation', 'manual__2024-11-19T00:21:47.385967+00:00', '--job-id', '115', '--raw', '--subdir', 'DAGS_FOLDER/staging_data_dag.py', '--cfg-path', '/tmp/tmp_cv1f6wf']
+[2024-11-20T04:34:28.490+0100] {standard_task_runner.py:105} INFO - Job 115: Subtask run_data_transformation
+[2024-11-20T04:34:28.669+0100] {task_command.py:467} INFO - Running <TaskInstance: etl_pipeline_to_snowflake.run_data_transformation manual__2024-11-19T00:21:47.385967+00:00 [running]> on host zainab.
+[2024-11-20T04:34:28.884+0100] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='etl_pipeline_to_snowflake' AIRFLOW_CTX_TASK_ID='run_data_transformation' AIRFLOW_CTX_EXECUTION_DATE='2024-11-19T00:21:47.385967+00:00' AIRFLOW_CTX_TRY_NUMBER='47' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-11-19T00:21:47.385967+00:00'
+[2024-11-20T04:34:28.887+0100] {logging_mixin.py:190} INFO - Task instance is in running state
+[2024-11-20T04:34:28.890+0100] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2024-11-20T04:34:28.893+0100] {logging_mixin.py:190} INFO - Current task name:run_data_transformation state:running start_date:2024-11-20 03:34:28.246395+00:00
+[2024-11-20T04:34:28.897+0100] {logging_mixin.py:190} INFO - Dag name:etl_pipeline_to_snowflake and current dag run status:running
+[2024-11-20T04:34:28.900+0100] {taskinstance.py:731} INFO - ::endgroup::
+[2024-11-20T04:34:29.486+0100] {transform.py:36} INFO - Transformation complete.
+[2024-11-20T04:34:29.514+0100] {base.py:84} INFO - Retrieving connection 'snowflake_conn_id'
+[2024-11-20T04:34:29.518+0100] {connection.py:414} INFO - Snowflake Connector for Python Version: 3.12.3, Python Version: 3.10.12, Platform: Linux-5.15.167.4-microsoft-standard-WSL2-x86_64-with-glibc2.35
+[2024-11-20T04:34:29.523+0100] {connection.py:1197} INFO - Connecting to GLOBAL Snowflake domain
+[2024-11-20T04:34:29.527+0100] {connection.py:1278} INFO - This connection is in OCSP Fail Open Mode. TLS Certificates would be checked for validity and revocation status. Any other Certificate Revocation related exceptions or OCSP Responder failures would be disregarded in favor of connectivity.
+[2024-11-20T04:34:34.071+0100] {cursor.py:1166} INFO - Number of results in first chunk: 1
+[2024-11-20T04:34:34.074+0100] {sql.py:553} INFO - Running statement: SELECT COUNT(*) 
+        FROM information_schema.tables 
+        WHERE table_schema = 'STAGING' 
+        AND table_name = 'COUNTRY_DATA';, parameters: None
+[2024-11-20T04:34:34.991+0100] {cursor.py:1166} INFO - Number of results in first chunk: 1
+[2024-11-20T04:34:34.994+0100] {sql.py:562} INFO - Rows affected: 1
+[2024-11-20T04:34:34.999+0100] {snowflake.py:447} INFO - Rows affected: 1
+[2024-11-20T04:34:35.004+0100] {snowflake.py:448} INFO - Snowflake query id: 01b87d36-0203-b012-0000-0003159eedf1
+[2024-11-20T04:34:35.288+0100] {cursor.py:1166} INFO - Number of results in first chunk: 1
+[2024-11-20T04:34:35.295+0100] {connection.py:789} INFO - closed
+[2024-11-20T04:34:35.493+0100] {connection.py:795} INFO - No async queries seem to be running, deleting session
+[2024-11-20T04:34:35.707+0100] {connection.py:414} INFO - Snowflake Connector for Python Version: 3.12.3, Python Version: 3.10.12, Platform: Linux-5.15.167.4-microsoft-standard-WSL2-x86_64-with-glibc2.35
+[2024-11-20T04:34:35.714+0100] {connection.py:1197} INFO - Connecting to GLOBAL Snowflake domain
+[2024-11-20T04:34:35.719+0100] {connection.py:1278} INFO - This connection is in OCSP Fail Open Mode. TLS Certificates would be checked for validity and revocation status. Any other Certificate Revocation related exceptions or OCSP Responder failures would be disregarded in favor of connectivity.
+[2024-11-20T04:34:36.882+0100] {cursor.py:1166} INFO - Number of results in first chunk: 1
+[2024-11-20T04:34:36.885+0100] {sql.py:553} INFO - Running statement: CREATE TEMP TABLE staging.country_data_temp AS
+        SELECT * FROM staging.country_data LIMIT 0;, parameters: None
+[2024-11-20T04:34:37.516+0100] {cursor.py:1166} INFO - Number of results in first chunk: 1
+[2024-11-20T04:34:37.522+0100] {sql.py:562} INFO - Rows affected: 1
+[2024-11-20T04:34:37.525+0100] {snowflake.py:447} INFO - Rows affected: 1
+[2024-11-20T04:34:37.530+0100] {snowflake.py:448} INFO - Snowflake query id: 01b87d36-0203-b012-0000-0003159eedf5
+[2024-11-20T04:34:37.750+0100] {cursor.py:1166} INFO - Number of results in first chunk: 1
+[2024-11-20T04:34:37.756+0100] {connection.py:789} INFO - closed
+[2024-11-20T04:34:37.970+0100] {connection.py:795} INFO - No async queries seem to be running, deleting session
+[2024-11-20T04:34:38.206+0100] {connection.py:414} INFO - Snowflake Connector for Python Version: 3.12.3, Python Version: 3.10.12, Platform: Linux-5.15.167.4-microsoft-standard-WSL2-x86_64-with-glibc2.35
+[2024-11-20T04:34:38.209+0100] {connection.py:1197} INFO - Connecting to GLOBAL Snowflake domain
+[2024-11-20T04:34:38.216+0100] {connection.py:1278} INFO - This connection is in OCSP Fail Open Mode. TLS Certificates would be checked for validity and revocation status. Any other Certificate Revocation related exceptions or OCSP Responder failures would be disregarded in favor of connectivity.
+[2024-11-20T04:34:39.416+0100] {cursor.py:1166} INFO - Number of results in first chunk: 1
+[2024-11-20T04:34:39.423+0100] {sql.py:553} INFO - Running statement: INSERT INTO staging.country_data_temp (Country_Name, Independence, UN_Member, Start_of_Week, Official_Name, Common_Native_Name, Currency_Code, Currency_Name, Currency_Symbol, Country_Code, Capital, Region, Sub_Region, Languages, Area, Population, Continents)
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s), parameters: ('South Georgia', False, False, 'monday', 'South Georgia and the South Sandwich Islands', 'Unknown', 'AED', 'No Currency Name', 'No Currency Symbol', '+500', 'No Capital', 'Antarctic', 'No Sub-Region', 'English', 3903.0, 30, 'No Continents')
+[2024-11-20T04:34:39.808+0100] {connection.py:789} INFO - closed
+[2024-11-20T04:34:40.096+0100] {connection.py:795} INFO - No async queries seem to be running, deleting session
+[2024-11-20T04:34:40.305+0100] {load.py:126} ERROR - Error in load_data_to_snowflake: 002003 (42S02): 01b87d36-0203-b084-0003-159e00015182: SQL compilation error:
+Table 'COUNTRY_DATA.STAGING.COUNTRY_DATA_TEMP' does not exist or not authorized.
+[2024-11-20T04:34:40.310+0100] {taskinstance.py:3310} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/mnt/c/Users/zaina/Documents/Core_Data_Engineering/airflow/airflow_coresentiment_Data_pipeline/airflow/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/mnt/c/Users/zaina/Documents/Core_Data_Engineering/airflow/airflow_coresentiment_Data_pipeline/airflow/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+  File "/mnt/c/Users/zaina/Documents/Core_Data_Engineering/airflow/airflow_coresentiment_Data_pipeline/airflow/lib/python3.10/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+  File "/mnt/c/Users/zaina/Documents/Core_Data_Engineering/airflow/airflow_coresentiment_Data_pipeline/airflow/lib/python3.10/site-packages/airflow/models/baseoperator.py", line 406, in wrapper
+    return func(self, *args, **kwargs)
+  File "/mnt/c/Users/zaina/Documents/Core_Data_Engineering/airflow/airflow_coresentiment_Data_pipeline/airflow/lib/python3.10/site-packages/airflow/operators/python.py", line 238, in execute
+    return_value = self.execute_callable()
+  File "/mnt/c/Users/zaina/Documents/Core_Data_Engineering/airflow/airflow_coresentiment_Data_pipeline/airflow/lib/python3.10/site-packages/airflow/operators/python.py", line 256, in execute_callable
+    return runner.run(*self.op_args, **self.op_kwargs)
+  File "/mnt/c/Users/zaina/Documents/Core_Data_Engineering/airflow/airflow_coresentiment_Data_pipeline/airflow/lib/python3.10/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+  File "/mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/transform.py", line 110, in run_transformation
+    load_function(
+  File "/mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py", line 110, in load_data_to_snowflake
+    snowflake_hook.run(insert_temp_query, parameters=row)
+  File "/mnt/c/Users/zaina/Documents/Core_Data_Engineering/airflow/airflow_coresentiment_Data_pipeline/airflow/lib/python3.10/site-packages/airflow/providers/snowflake/hooks/snowflake.py", line 435, in run
+    self._run_command(cur, sql_statement, parameters)  # type: ignore[attr-defined]
+  File "/mnt/c/Users/zaina/Documents/Core_Data_Engineering/airflow/airflow_coresentiment_Data_pipeline/airflow/lib/python3.10/site-packages/airflow/providers/common/sql/hooks/sql.py", line 556, in _run_command
+    cur.execute(sql_statement, parameters)
+  File "/mnt/c/Users/zaina/Documents/Core_Data_Engineering/airflow/airflow_coresentiment_Data_pipeline/airflow/lib/python3.10/site-packages/snowflake/connector/cursor.py", line 1097, in execute
+    Error.errorhandler_wrapper(self.connection, self, error_class, errvalue)
+  File "/mnt/c/Users/zaina/Documents/Core_Data_Engineering/airflow/airflow_coresentiment_Data_pipeline/airflow/lib/python3.10/site-packages/snowflake/connector/errors.py", line 284, in errorhandler_wrapper
+    handed_over = Error.hand_to_other_handler(
+  File "/mnt/c/Users/zaina/Documents/Core_Data_Engineering/airflow/airflow_coresentiment_Data_pipeline/airflow/lib/python3.10/site-packages/snowflake/connector/errors.py", line 339, in hand_to_other_handler
+    cursor.errorhandler(connection, cursor, error_class, error_value)
+  File "/mnt/c/Users/zaina/Documents/Core_Data_Engineering/airflow/airflow_coresentiment_Data_pipeline/airflow/lib/python3.10/site-packages/snowflake/connector/errors.py", line 215, in default_errorhandler
+    raise error_class(
+snowflake.connector.errors.ProgrammingError: 002003 (42S02): 01b87d36-0203-b084-0003-159e00015182: SQL compilation error:
+Table 'COUNTRY_DATA.STAGING.COUNTRY_DATA_TEMP' does not exist or not authorized.
+[2024-11-20T04:34:40.387+0100] {logging_mixin.py:190} INFO - Task instance in failure state
+[2024-11-20T04:34:40.395+0100] {logging_mixin.py:190} INFO - Task start:2024-11-20 03:34:28.246395+00:00 end:2024-11-20 03:34:40.386569+00:00 duration:12.140174
+[2024-11-20T04:34:40.401+0100] {logging_mixin.py:190} INFO - Task:<Task(PythonOperator): run_data_transformation> dag:<DAG: etl_pipeline_to_snowflake> dagrun:<DagRun etl_pipeline_to_snowflake @ 2024-11-19 00:21:47.385967+00:00: manual__2024-11-19T00:21:47.385967+00:00, state:running, queued_at: 2024-11-20 03:33:12.383568+00:00. externally triggered: True>
+[2024-11-20T04:34:40.405+0100] {logging_mixin.py:190} INFO - Failure caused by 002003 (42S02): 01b87d36-0203-b084-0003-159e00015182: SQL compilation error:
+Table 'COUNTRY_DATA.STAGING.COUNTRY_DATA_TEMP' does not exist or not authorized.
+[2024-11-20T04:34:40.408+0100] {taskinstance.py:1225} INFO - Marking task as UP_FOR_RETRY. dag_id=etl_pipeline_to_snowflake, task_id=run_data_transformation, run_id=manual__2024-11-19T00:21:47.385967+00:00, execution_date=20241119T002147, start_date=20241120T033428, end_date=20241120T033440
+[2024-11-20T04:34:40.465+0100] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-11-20T04:34:40.469+0100] {standard_task_runner.py:124} ERROR - Failed to execute job 115 for task run_data_transformation (002003 (42S02): 01b87d36-0203-b084-0003-159e00015182: SQL compilation error:
+Table 'COUNTRY_DATA.STAGING.COUNTRY_DATA_TEMP' does not exist or not authorized.; 255115)
+Traceback (most recent call last):
+  File "/mnt/c/Users/zaina/Documents/Core_Data_Engineering/airflow/airflow_coresentiment_Data_pipeline/airflow/lib/python3.10/site-packages/airflow/task/task_runner/standard_task_runner.py", line 117, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+  File "/mnt/c/Users/zaina/Documents/Core_Data_Engineering/airflow/airflow_coresentiment_Data_pipeline/airflow/lib/python3.10/site-packages/airflow/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+  File "/mnt/c/Users/zaina/Documents/Core_Data_Engineering/airflow/airflow_coresentiment_Data_pipeline/airflow/lib/python3.10/site-packages/airflow/utils/cli.py", line 115, in wrapper
+    return f(*args, **kwargs)
+  File "/mnt/c/Users/zaina/Documents/Core_Data_Engineering/airflow/airflow_coresentiment_Data_pipeline/airflow/lib/python3.10/site-packages/airflow/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+  File "/mnt/c/Users/zaina/Documents/Core_Data_Engineering/airflow/airflow_coresentiment_Data_pipeline/airflow/lib/python3.10/site-packages/airflow/cli/commands/task_command.py", line 256, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+  File "/mnt/c/Users/zaina/Documents/Core_Data_Engineering/airflow/airflow_coresentiment_Data_pipeline/airflow/lib/python3.10/site-packages/airflow/cli/commands/task_command.py", line 341, in _run_raw_task
+    return ti._run_raw_task(
+  File "/mnt/c/Users/zaina/Documents/Core_Data_Engineering/airflow/airflow_coresentiment_Data_pipeline/airflow/lib/python3.10/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/mnt/c/Users/zaina/Documents/Core_Data_Engineering/airflow/airflow_coresentiment_Data_pipeline/airflow/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 3004, in _run_raw_task
+    return _run_raw_task(
+  File "/mnt/c/Users/zaina/Documents/Core_Data_Engineering/airflow/airflow_coresentiment_Data_pipeline/airflow/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 273, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/mnt/c/Users/zaina/Documents/Core_Data_Engineering/airflow/airflow_coresentiment_Data_pipeline/airflow/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 3158, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+  File "/mnt/c/Users/zaina/Documents/Core_Data_Engineering/airflow/airflow_coresentiment_Data_pipeline/airflow/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 3182, in _execute_task
+    return _execute_task(self, context, task_orig)
+  File "/mnt/c/Users/zaina/Documents/Core_Data_Engineering/airflow/airflow_coresentiment_Data_pipeline/airflow/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/mnt/c/Users/zaina/Documents/Core_Data_Engineering/airflow/airflow_coresentiment_Data_pipeline/airflow/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+  File "/mnt/c/Users/zaina/Documents/Core_Data_Engineering/airflow/airflow_coresentiment_Data_pipeline/airflow/lib/python3.10/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+  File "/mnt/c/Users/zaina/Documents/Core_Data_Engineering/airflow/airflow_coresentiment_Data_pipeline/airflow/lib/python3.10/site-packages/airflow/models/baseoperator.py", line 406, in wrapper
+    return func(self, *args, **kwargs)
+  File "/mnt/c/Users/zaina/Documents/Core_Data_Engineering/airflow/airflow_coresentiment_Data_pipeline/airflow/lib/python3.10/site-packages/airflow/operators/python.py", line 238, in execute
+    return_value = self.execute_callable()
+  File "/mnt/c/Users/zaina/Documents/Core_Data_Engineering/airflow/airflow_coresentiment_Data_pipeline/airflow/lib/python3.10/site-packages/airflow/operators/python.py", line 256, in execute_callable
+    return runner.run(*self.op_args, **self.op_kwargs)
+  File "/mnt/c/Users/zaina/Documents/Core_Data_Engineering/airflow/airflow_coresentiment_Data_pipeline/airflow/lib/python3.10/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+  File "/mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/transform.py", line 110, in run_transformation
+    load_function(
+  File "/mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py", line 110, in load_data_to_snowflake
+    snowflake_hook.run(insert_temp_query, parameters=row)
+  File "/mnt/c/Users/zaina/Documents/Core_Data_Engineering/airflow/airflow_coresentiment_Data_pipeline/airflow/lib/python3.10/site-packages/airflow/providers/snowflake/hooks/snowflake.py", line 435, in run
+    self._run_command(cur, sql_statement, parameters)  # type: ignore[attr-defined]
+  File "/mnt/c/Users/zaina/Documents/Core_Data_Engineering/airflow/airflow_coresentiment_Data_pipeline/airflow/lib/python3.10/site-packages/airflow/providers/common/sql/hooks/sql.py", line 556, in _run_command
+    cur.execute(sql_statement, parameters)
+  File "/mnt/c/Users/zaina/Documents/Core_Data_Engineering/airflow/airflow_coresentiment_Data_pipeline/airflow/lib/python3.10/site-packages/snowflake/connector/cursor.py", line 1097, in execute
+    Error.errorhandler_wrapper(self.connection, self, error_class, errvalue)
+  File "/mnt/c/Users/zaina/Documents/Core_Data_Engineering/airflow/airflow_coresentiment_Data_pipeline/airflow/lib/python3.10/site-packages/snowflake/connector/errors.py", line 284, in errorhandler_wrapper
+    handed_over = Error.hand_to_other_handler(
+  File "/mnt/c/Users/zaina/Documents/Core_Data_Engineering/airflow/airflow_coresentiment_Data_pipeline/airflow/lib/python3.10/site-packages/snowflake/connector/errors.py", line 339, in hand_to_other_handler
+    cursor.errorhandler(connection, cursor, error_class, error_value)
+  File "/mnt/c/Users/zaina/Documents/Core_Data_Engineering/airflow/airflow_coresentiment_Data_pipeline/airflow/lib/python3.10/site-packages/snowflake/connector/errors.py", line 215, in default_errorhandler
+    raise error_class(
+snowflake.connector.errors.ProgrammingError: 002003 (42S02): 01b87d36-0203-b084-0003-159e00015182: SQL compilation error:
+Table 'COUNTRY_DATA.STAGING.COUNTRY_DATA_TEMP' does not exist or not authorized.
+[2024-11-20T04:34:40.543+0100] {local_task_job_runner.py:266} INFO - Task exited with return code 1
+[2024-11-20T04:34:40.564+0100] {taskinstance.py:3900} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-11-20T04:34:40.568+0100] {local_task_job_runner.py:245} INFO - ::endgroup::

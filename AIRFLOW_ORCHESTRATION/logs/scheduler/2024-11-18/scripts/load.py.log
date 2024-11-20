@@ -1,0 +1,424 @@
+[2024-11-18T18:22:40.728+0100] {processor.py:186} INFO - Started process (PID=114190) to work on /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T18:22:40.730+0100] {processor.py:914} INFO - Processing file /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py for tasks to queue
+[2024-11-18T18:22:40.735+0100] {logging_mixin.py:190} INFO - [2024-11-18T18:22:40.733+0100] {dagbag.py:588} INFO - Filling up the DagBag from /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T18:22:42.609+0100] {logging_mixin.py:190} INFO - [2024-11-18T18:22:42.601+0100] {dagbag.py:387} ERROR - Failed to import: /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+Traceback (most recent call last):
+  File "/mnt/c/Users/zaina/Documents/Core_Data_Engineering/airflow/airflow_coresentiment_Data_pipeline/airflow/lib/python3.10/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py", line 4, in <module>
+    from airflow.providers.amazon.aws.hooks.s3 import S3Hook
+ModuleNotFoundError: No module named 'airflow.providers.amazon'
+[2024-11-18T18:22:42.612+0100] {processor.py:927} WARNING - No viable dags retrieved from /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T18:22:42.645+0100] {processor.py:208} INFO - Processing /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py took 1.942 seconds
+[2024-11-18T18:23:47.065+0100] {processor.py:186} INFO - Started process (PID=114498) to work on /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T18:23:47.068+0100] {processor.py:914} INFO - Processing file /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py for tasks to queue
+[2024-11-18T18:23:47.072+0100] {logging_mixin.py:190} INFO - [2024-11-18T18:23:47.071+0100] {dagbag.py:588} INFO - Filling up the DagBag from /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T18:23:54.066+0100] {logging_mixin.py:190} INFO - [2024-11-18T18:23:53.854+0100] {dagbag.py:387} ERROR - Failed to import: /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+Traceback (most recent call last):
+  File "/mnt/c/Users/zaina/Documents/Core_Data_Engineering/airflow/airflow_coresentiment_Data_pipeline/airflow/lib/python3.10/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py", line 4, in <module>
+    from airflow.providers.amazon.aws.hooks.s3 import S3Hook
+ModuleNotFoundError: No module named 'airflow.providers.amazon'
+[2024-11-18T18:23:54.076+0100] {processor.py:927} WARNING - No viable dags retrieved from /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T18:23:54.164+0100] {processor.py:208} INFO - Processing /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py took 7.122 seconds
+[2024-11-18T18:25:08.509+0100] {processor.py:186} INFO - Started process (PID=114889) to work on /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T18:25:08.513+0100] {processor.py:914} INFO - Processing file /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py for tasks to queue
+[2024-11-18T18:25:08.519+0100] {logging_mixin.py:190} INFO - [2024-11-18T18:25:08.517+0100] {dagbag.py:588} INFO - Filling up the DagBag from /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T18:25:10.946+0100] {logging_mixin.py:190} INFO - [2024-11-18T18:25:10.929+0100] {dagbag.py:387} ERROR - Failed to import: /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+Traceback (most recent call last):
+  File "/mnt/c/Users/zaina/Documents/Core_Data_Engineering/airflow/airflow_coresentiment_Data_pipeline/airflow/lib/python3.10/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py", line 4, in <module>
+    from airflow.providers.amazon.aws.hooks.s3 import S3Hook
+ModuleNotFoundError: No module named 'airflow.providers.amazon'
+[2024-11-18T18:25:10.950+0100] {processor.py:927} WARNING - No viable dags retrieved from /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T18:25:10.999+0100] {processor.py:208} INFO - Processing /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py took 2.514 seconds
+[2024-11-18T18:26:36.141+0100] {processor.py:186} INFO - Started process (PID=115304) to work on /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T18:26:36.143+0100] {processor.py:914} INFO - Processing file /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py for tasks to queue
+[2024-11-18T18:26:36.146+0100] {logging_mixin.py:190} INFO - [2024-11-18T18:26:36.145+0100] {dagbag.py:588} INFO - Filling up the DagBag from /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T18:26:37.801+0100] {logging_mixin.py:190} INFO - [2024-11-18T18:26:37.783+0100] {dagbag.py:387} ERROR - Failed to import: /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+Traceback (most recent call last):
+  File "/mnt/c/Users/zaina/Documents/Core_Data_Engineering/airflow/airflow_coresentiment_Data_pipeline/airflow/lib/python3.10/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py", line 4, in <module>
+    from airflow.providers.amazon.aws.hooks.s3 import S3Hook
+ModuleNotFoundError: No module named 'airflow.providers.amazon'
+[2024-11-18T18:26:37.808+0100] {processor.py:927} WARNING - No viable dags retrieved from /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T18:26:37.846+0100] {processor.py:208} INFO - Processing /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py took 1.721 seconds
+[2024-11-18T18:27:58.977+0100] {processor.py:186} INFO - Started process (PID=115716) to work on /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T18:27:58.979+0100] {processor.py:914} INFO - Processing file /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py for tasks to queue
+[2024-11-18T18:27:58.982+0100] {logging_mixin.py:190} INFO - [2024-11-18T18:27:58.981+0100] {dagbag.py:588} INFO - Filling up the DagBag from /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T18:28:01.042+0100] {logging_mixin.py:190} INFO - [2024-11-18T18:28:01.030+0100] {dagbag.py:387} ERROR - Failed to import: /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+Traceback (most recent call last):
+  File "/mnt/c/Users/zaina/Documents/Core_Data_Engineering/airflow/airflow_coresentiment_Data_pipeline/airflow/lib/python3.10/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py", line 4, in <module>
+    from airflow.providers.amazon.aws.hooks.s3 import S3Hook
+ModuleNotFoundError: No module named 'airflow.providers.amazon'
+[2024-11-18T18:28:01.046+0100] {processor.py:927} WARNING - No viable dags retrieved from /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T18:28:01.091+0100] {processor.py:208} INFO - Processing /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py took 2.138 seconds
+[2024-11-18T18:29:30.303+0100] {processor.py:186} INFO - Started process (PID=116131) to work on /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T18:29:30.307+0100] {processor.py:914} INFO - Processing file /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py for tasks to queue
+[2024-11-18T18:29:30.317+0100] {logging_mixin.py:190} INFO - [2024-11-18T18:29:30.311+0100] {dagbag.py:588} INFO - Filling up the DagBag from /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T18:29:33.368+0100] {logging_mixin.py:190} INFO - [2024-11-18T18:29:33.330+0100] {dagbag.py:387} ERROR - Failed to import: /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+Traceback (most recent call last):
+  File "/mnt/c/Users/zaina/Documents/Core_Data_Engineering/airflow/airflow_coresentiment_Data_pipeline/airflow/lib/python3.10/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py", line 4, in <module>
+    from airflow.providers.amazon.aws.hooks.s3 import S3Hook
+ModuleNotFoundError: No module named 'airflow.providers.amazon'
+[2024-11-18T18:29:33.371+0100] {processor.py:927} WARNING - No viable dags retrieved from /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T18:29:33.463+0100] {processor.py:208} INFO - Processing /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py took 3.188 seconds
+[2024-11-18T18:37:43.170+0100] {processor.py:186} INFO - Started process (PID=118222) to work on /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T18:37:43.185+0100] {processor.py:914} INFO - Processing file /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py for tasks to queue
+[2024-11-18T18:37:43.198+0100] {logging_mixin.py:190} INFO - [2024-11-18T18:37:43.196+0100] {dagbag.py:588} INFO - Filling up the DagBag from /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T18:37:43.286+0100] {processor.py:927} WARNING - No viable dags retrieved from /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T18:37:43.354+0100] {processor.py:208} INFO - Processing /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py took 0.224 seconds
+[2024-11-18T18:39:41.878+0100] {processor.py:186} INFO - Started process (PID=118763) to work on /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T18:39:41.881+0100] {processor.py:914} INFO - Processing file /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py for tasks to queue
+[2024-11-18T18:39:41.887+0100] {logging_mixin.py:190} INFO - [2024-11-18T18:39:41.886+0100] {dagbag.py:588} INFO - Filling up the DagBag from /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T18:39:41.909+0100] {processor.py:927} WARNING - No viable dags retrieved from /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T18:39:41.933+0100] {processor.py:208} INFO - Processing /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py took 0.070 seconds
+[2024-11-18T18:42:36.093+0100] {processor.py:186} INFO - Started process (PID=119506) to work on /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T18:42:36.100+0100] {processor.py:914} INFO - Processing file /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py for tasks to queue
+[2024-11-18T18:42:36.116+0100] {logging_mixin.py:190} INFO - [2024-11-18T18:42:36.110+0100] {dagbag.py:588} INFO - Filling up the DagBag from /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T18:42:36.182+0100] {processor.py:927} WARNING - No viable dags retrieved from /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T18:42:36.260+0100] {processor.py:208} INFO - Processing /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py took 0.217 seconds
+[2024-11-18T18:44:49.822+0100] {processor.py:186} INFO - Started process (PID=120055) to work on /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T18:44:49.826+0100] {processor.py:914} INFO - Processing file /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py for tasks to queue
+[2024-11-18T18:44:49.832+0100] {logging_mixin.py:190} INFO - [2024-11-18T18:44:49.830+0100] {dagbag.py:588} INFO - Filling up the DagBag from /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T18:44:49.979+0100] {processor.py:927} WARNING - No viable dags retrieved from /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T18:44:50.030+0100] {processor.py:208} INFO - Processing /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py took 0.231 seconds
+[2024-11-18T18:47:39.086+0100] {processor.py:186} INFO - Started process (PID=120760) to work on /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T18:47:39.090+0100] {processor.py:914} INFO - Processing file /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py for tasks to queue
+[2024-11-18T18:47:39.097+0100] {logging_mixin.py:190} INFO - [2024-11-18T18:47:39.094+0100] {dagbag.py:588} INFO - Filling up the DagBag from /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T18:47:39.124+0100] {processor.py:927} WARNING - No viable dags retrieved from /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T18:47:39.162+0100] {processor.py:208} INFO - Processing /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py took 0.121 seconds
+[2024-11-18T18:49:35.001+0100] {processor.py:186} INFO - Started process (PID=121292) to work on /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T18:49:35.003+0100] {processor.py:914} INFO - Processing file /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py for tasks to queue
+[2024-11-18T18:49:35.011+0100] {logging_mixin.py:190} INFO - [2024-11-18T18:49:35.009+0100] {dagbag.py:588} INFO - Filling up the DagBag from /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T18:49:35.037+0100] {processor.py:927} WARNING - No viable dags retrieved from /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T18:49:35.064+0100] {processor.py:208} INFO - Processing /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py took 0.081 seconds
+[2024-11-18T18:50:47.996+0100] {processor.py:186} INFO - Started process (PID=121629) to work on /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T18:50:47.998+0100] {processor.py:914} INFO - Processing file /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py for tasks to queue
+[2024-11-18T18:50:48.005+0100] {logging_mixin.py:190} INFO - [2024-11-18T18:50:48.001+0100] {dagbag.py:588} INFO - Filling up the DagBag from /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T18:50:48.060+0100] {processor.py:927} WARNING - No viable dags retrieved from /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T18:50:48.122+0100] {processor.py:208} INFO - Processing /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py took 0.144 seconds
+[2024-11-18T18:54:50.526+0100] {processor.py:186} INFO - Started process (PID=122656) to work on /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T18:54:50.533+0100] {processor.py:914} INFO - Processing file /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py for tasks to queue
+[2024-11-18T18:54:50.543+0100] {logging_mixin.py:190} INFO - [2024-11-18T18:54:50.537+0100] {dagbag.py:588} INFO - Filling up the DagBag from /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T18:54:50.575+0100] {processor.py:927} WARNING - No viable dags retrieved from /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T18:54:50.633+0100] {processor.py:208} INFO - Processing /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py took 0.164 seconds
+[2024-11-18T18:56:39.043+0100] {processor.py:186} INFO - Started process (PID=123149) to work on /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T18:56:39.046+0100] {processor.py:914} INFO - Processing file /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py for tasks to queue
+[2024-11-18T18:56:39.049+0100] {logging_mixin.py:190} INFO - [2024-11-18T18:56:39.048+0100] {dagbag.py:588} INFO - Filling up the DagBag from /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T18:56:39.068+0100] {processor.py:927} WARNING - No viable dags retrieved from /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T18:56:39.091+0100] {processor.py:208} INFO - Processing /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py took 0.066 seconds
+[2024-11-18T18:57:46.702+0100] {processor.py:186} INFO - Started process (PID=123459) to work on /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T18:57:46.706+0100] {processor.py:914} INFO - Processing file /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py for tasks to queue
+[2024-11-18T18:57:46.714+0100] {logging_mixin.py:190} INFO - [2024-11-18T18:57:46.710+0100] {dagbag.py:588} INFO - Filling up the DagBag from /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T18:57:46.784+0100] {processor.py:927} WARNING - No viable dags retrieved from /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T18:57:46.880+0100] {processor.py:208} INFO - Processing /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py took 0.204 seconds
+[2024-11-18T18:59:05.497+0100] {processor.py:186} INFO - Started process (PID=123815) to work on /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T18:59:05.500+0100] {processor.py:914} INFO - Processing file /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py for tasks to queue
+[2024-11-18T18:59:05.504+0100] {logging_mixin.py:190} INFO - [2024-11-18T18:59:05.503+0100] {dagbag.py:588} INFO - Filling up the DagBag from /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T18:59:05.535+0100] {processor.py:927} WARNING - No viable dags retrieved from /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T18:59:05.567+0100] {processor.py:208} INFO - Processing /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py took 0.091 seconds
+[2024-11-18T19:00:24.643+0100] {processor.py:186} INFO - Started process (PID=124182) to work on /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T19:00:24.646+0100] {processor.py:914} INFO - Processing file /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py for tasks to queue
+[2024-11-18T19:00:24.650+0100] {logging_mixin.py:190} INFO - [2024-11-18T19:00:24.649+0100] {dagbag.py:588} INFO - Filling up the DagBag from /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T19:00:24.676+0100] {processor.py:927} WARNING - No viable dags retrieved from /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T19:00:24.702+0100] {processor.py:208} INFO - Processing /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py took 0.076 seconds
+[2024-11-18T19:01:37.113+0100] {processor.py:186} INFO - Started process (PID=124508) to work on /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T19:01:37.116+0100] {processor.py:914} INFO - Processing file /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py for tasks to queue
+[2024-11-18T19:01:37.121+0100] {logging_mixin.py:190} INFO - [2024-11-18T19:01:37.118+0100] {dagbag.py:588} INFO - Filling up the DagBag from /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T19:01:37.146+0100] {processor.py:927} WARNING - No viable dags retrieved from /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T19:01:37.202+0100] {processor.py:208} INFO - Processing /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py took 0.109 seconds
+[2024-11-18T19:03:04.094+0100] {processor.py:186} INFO - Started process (PID=124896) to work on /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T19:03:04.098+0100] {processor.py:914} INFO - Processing file /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py for tasks to queue
+[2024-11-18T19:03:04.102+0100] {logging_mixin.py:190} INFO - [2024-11-18T19:03:04.101+0100] {dagbag.py:588} INFO - Filling up the DagBag from /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T19:03:04.131+0100] {processor.py:927} WARNING - No viable dags retrieved from /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T19:03:04.160+0100] {processor.py:208} INFO - Processing /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py took 0.083 seconds
+[2024-11-18T19:04:13.114+0100] {processor.py:186} INFO - Started process (PID=125211) to work on /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T19:04:13.119+0100] {processor.py:914} INFO - Processing file /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py for tasks to queue
+[2024-11-18T19:04:13.126+0100] {logging_mixin.py:190} INFO - [2024-11-18T19:04:13.124+0100] {dagbag.py:588} INFO - Filling up the DagBag from /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T19:04:13.208+0100] {processor.py:927} WARNING - No viable dags retrieved from /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T19:04:13.241+0100] {processor.py:208} INFO - Processing /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py took 0.156 seconds
+[2024-11-18T19:05:23.275+0100] {processor.py:186} INFO - Started process (PID=125531) to work on /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T19:05:23.279+0100] {processor.py:914} INFO - Processing file /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py for tasks to queue
+[2024-11-18T19:05:23.282+0100] {logging_mixin.py:190} INFO - [2024-11-18T19:05:23.281+0100] {dagbag.py:588} INFO - Filling up the DagBag from /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T19:05:23.303+0100] {processor.py:927} WARNING - No viable dags retrieved from /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T19:05:23.327+0100] {processor.py:208} INFO - Processing /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py took 0.071 seconds
+[2024-11-18T19:06:39.055+0100] {processor.py:186} INFO - Started process (PID=125868) to work on /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T19:06:39.064+0100] {processor.py:914} INFO - Processing file /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py for tasks to queue
+[2024-11-18T19:06:39.070+0100] {logging_mixin.py:190} INFO - [2024-11-18T19:06:39.068+0100] {dagbag.py:588} INFO - Filling up the DagBag from /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T19:06:39.199+0100] {processor.py:927} WARNING - No viable dags retrieved from /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T19:06:39.254+0100] {processor.py:208} INFO - Processing /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py took 0.470 seconds
+[2024-11-18T19:07:57.269+0100] {processor.py:186} INFO - Started process (PID=126228) to work on /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T19:07:57.271+0100] {processor.py:914} INFO - Processing file /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py for tasks to queue
+[2024-11-18T19:07:57.274+0100] {logging_mixin.py:190} INFO - [2024-11-18T19:07:57.273+0100] {dagbag.py:588} INFO - Filling up the DagBag from /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T19:07:57.295+0100] {processor.py:927} WARNING - No viable dags retrieved from /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T19:07:57.322+0100] {processor.py:208} INFO - Processing /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py took 0.065 seconds
+[2024-11-18T19:09:05.429+0100] {processor.py:186} INFO - Started process (PID=126540) to work on /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T19:09:05.433+0100] {processor.py:914} INFO - Processing file /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py for tasks to queue
+[2024-11-18T19:09:05.439+0100] {logging_mixin.py:190} INFO - [2024-11-18T19:09:05.436+0100] {dagbag.py:588} INFO - Filling up the DagBag from /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T19:09:05.503+0100] {processor.py:927} WARNING - No viable dags retrieved from /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T19:09:05.552+0100] {processor.py:208} INFO - Processing /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py took 0.146 seconds
+[2024-11-18T19:10:22.863+0100] {processor.py:186} INFO - Started process (PID=126887) to work on /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T19:10:22.865+0100] {processor.py:914} INFO - Processing file /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py for tasks to queue
+[2024-11-18T19:10:22.869+0100] {logging_mixin.py:190} INFO - [2024-11-18T19:10:22.868+0100] {dagbag.py:588} INFO - Filling up the DagBag from /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T19:10:22.889+0100] {processor.py:927} WARNING - No viable dags retrieved from /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T19:10:22.919+0100] {processor.py:208} INFO - Processing /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py took 0.080 seconds
+[2024-11-18T19:11:27.430+0100] {processor.py:186} INFO - Started process (PID=127182) to work on /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T19:11:27.433+0100] {processor.py:914} INFO - Processing file /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py for tasks to queue
+[2024-11-18T19:11:27.437+0100] {logging_mixin.py:190} INFO - [2024-11-18T19:11:27.436+0100] {dagbag.py:588} INFO - Filling up the DagBag from /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T19:11:27.462+0100] {processor.py:927} WARNING - No viable dags retrieved from /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T19:11:27.487+0100] {processor.py:208} INFO - Processing /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py took 0.073 seconds
+[2024-11-18T19:12:43.302+0100] {processor.py:186} INFO - Started process (PID=127529) to work on /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T19:12:43.309+0100] {processor.py:914} INFO - Processing file /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py for tasks to queue
+[2024-11-18T19:12:43.329+0100] {logging_mixin.py:190} INFO - [2024-11-18T19:12:43.312+0100] {dagbag.py:588} INFO - Filling up the DagBag from /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T19:12:43.652+0100] {processor.py:927} WARNING - No viable dags retrieved from /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T19:12:43.695+0100] {processor.py:208} INFO - Processing /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py took 0.415 seconds
+[2024-11-18T19:13:56.325+0100] {processor.py:186} INFO - Started process (PID=127862) to work on /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T19:13:56.330+0100] {processor.py:914} INFO - Processing file /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py for tasks to queue
+[2024-11-18T19:13:56.335+0100] {logging_mixin.py:190} INFO - [2024-11-18T19:13:56.333+0100] {dagbag.py:588} INFO - Filling up the DagBag from /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T19:13:56.629+0100] {processor.py:927} WARNING - No viable dags retrieved from /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T19:13:56.778+0100] {processor.py:208} INFO - Processing /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py took 0.469 seconds
+[2024-11-18T19:15:08.655+0100] {processor.py:186} INFO - Started process (PID=128193) to work on /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T19:15:08.658+0100] {processor.py:914} INFO - Processing file /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py for tasks to queue
+[2024-11-18T19:15:08.661+0100] {logging_mixin.py:190} INFO - [2024-11-18T19:15:08.660+0100] {dagbag.py:588} INFO - Filling up the DagBag from /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T19:15:08.688+0100] {processor.py:927} WARNING - No viable dags retrieved from /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T19:15:08.712+0100] {processor.py:208} INFO - Processing /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py took 0.071 seconds
+[2024-11-18T19:18:05.360+0100] {processor.py:186} INFO - Started process (PID=128959) to work on /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T19:18:05.368+0100] {processor.py:914} INFO - Processing file /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py for tasks to queue
+[2024-11-18T19:18:05.385+0100] {logging_mixin.py:190} INFO - [2024-11-18T19:18:05.376+0100] {dagbag.py:588} INFO - Filling up the DagBag from /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T19:18:05.584+0100] {processor.py:927} WARNING - No viable dags retrieved from /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T19:18:05.904+0100] {processor.py:208} INFO - Processing /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py took 0.711 seconds
+[2024-11-18T19:19:56.111+0100] {processor.py:186} INFO - Started process (PID=129412) to work on /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T19:19:56.115+0100] {processor.py:914} INFO - Processing file /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py for tasks to queue
+[2024-11-18T19:19:56.123+0100] {logging_mixin.py:190} INFO - [2024-11-18T19:19:56.121+0100] {dagbag.py:588} INFO - Filling up the DagBag from /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T19:19:56.149+0100] {processor.py:927} WARNING - No viable dags retrieved from /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T19:19:56.192+0100] {processor.py:208} INFO - Processing /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py took 0.112 seconds
+[2024-11-18T19:22:40.020+0100] {processor.py:186} INFO - Started process (PID=130078) to work on /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T19:22:40.023+0100] {processor.py:914} INFO - Processing file /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py for tasks to queue
+[2024-11-18T19:22:40.033+0100] {logging_mixin.py:190} INFO - [2024-11-18T19:22:40.029+0100] {dagbag.py:588} INFO - Filling up the DagBag from /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T19:22:40.064+0100] {processor.py:927} WARNING - No viable dags retrieved from /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T19:22:40.145+0100] {processor.py:208} INFO - Processing /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py took 0.150 seconds
+[2024-11-18T19:24:35.070+0100] {processor.py:186} INFO - Started process (PID=130591) to work on /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T19:24:35.074+0100] {processor.py:914} INFO - Processing file /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py for tasks to queue
+[2024-11-18T19:24:35.078+0100] {logging_mixin.py:190} INFO - [2024-11-18T19:24:35.077+0100] {dagbag.py:588} INFO - Filling up the DagBag from /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T19:24:35.105+0100] {processor.py:927} WARNING - No viable dags retrieved from /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T19:24:35.140+0100] {processor.py:208} INFO - Processing /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py took 0.084 seconds
+[2024-11-18T19:25:40.624+0100] {processor.py:186} INFO - Started process (PID=130900) to work on /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T19:25:40.627+0100] {processor.py:914} INFO - Processing file /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py for tasks to queue
+[2024-11-18T19:25:40.633+0100] {logging_mixin.py:190} INFO - [2024-11-18T19:25:40.631+0100] {dagbag.py:588} INFO - Filling up the DagBag from /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T19:25:40.675+0100] {processor.py:927} WARNING - No viable dags retrieved from /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T19:25:40.715+0100] {processor.py:208} INFO - Processing /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py took 0.116 seconds
+[2024-11-18T19:26:37.321+0100] {processor.py:186} INFO - Started process (PID=131164) to work on /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T19:26:37.323+0100] {processor.py:914} INFO - Processing file /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py for tasks to queue
+[2024-11-18T19:26:37.326+0100] {logging_mixin.py:190} INFO - [2024-11-18T19:26:37.324+0100] {dagbag.py:588} INFO - Filling up the DagBag from /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T19:26:37.360+0100] {processor.py:927} WARNING - No viable dags retrieved from /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T19:26:37.388+0100] {processor.py:208} INFO - Processing /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py took 0.085 seconds
+[2024-11-18T19:27:31.079+0100] {processor.py:186} INFO - Started process (PID=131414) to work on /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T19:27:31.081+0100] {processor.py:914} INFO - Processing file /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py for tasks to queue
+[2024-11-18T19:27:31.084+0100] {logging_mixin.py:190} INFO - [2024-11-18T19:27:31.083+0100] {dagbag.py:588} INFO - Filling up the DagBag from /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T19:27:31.140+0100] {processor.py:927} WARNING - No viable dags retrieved from /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T19:27:31.160+0100] {processor.py:208} INFO - Processing /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py took 0.094 seconds
+[2024-11-18T19:28:30.296+0100] {processor.py:186} INFO - Started process (PID=131687) to work on /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T19:28:30.298+0100] {processor.py:914} INFO - Processing file /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py for tasks to queue
+[2024-11-18T19:28:30.300+0100] {logging_mixin.py:190} INFO - [2024-11-18T19:28:30.299+0100] {dagbag.py:588} INFO - Filling up the DagBag from /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T19:28:30.315+0100] {processor.py:927} WARNING - No viable dags retrieved from /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T19:28:30.330+0100] {processor.py:208} INFO - Processing /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py took 0.045 seconds
+[2024-11-18T19:29:24.901+0100] {processor.py:186} INFO - Started process (PID=131945) to work on /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T19:29:24.905+0100] {processor.py:914} INFO - Processing file /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py for tasks to queue
+[2024-11-18T19:29:24.909+0100] {logging_mixin.py:190} INFO - [2024-11-18T19:29:24.908+0100] {dagbag.py:588} INFO - Filling up the DagBag from /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T19:29:24.937+0100] {processor.py:927} WARNING - No viable dags retrieved from /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T19:29:24.959+0100] {processor.py:208} INFO - Processing /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py took 0.080 seconds
+[2024-11-18T19:30:22.991+0100] {processor.py:186} INFO - Started process (PID=132213) to work on /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T19:30:22.993+0100] {processor.py:914} INFO - Processing file /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py for tasks to queue
+[2024-11-18T19:30:22.995+0100] {logging_mixin.py:190} INFO - [2024-11-18T19:30:22.994+0100] {dagbag.py:588} INFO - Filling up the DagBag from /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T19:30:23.008+0100] {processor.py:927} WARNING - No viable dags retrieved from /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T19:30:23.023+0100] {processor.py:208} INFO - Processing /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py took 0.045 seconds
+[2024-11-18T19:31:19.728+0100] {processor.py:186} INFO - Started process (PID=132479) to work on /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T19:31:19.730+0100] {processor.py:914} INFO - Processing file /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py for tasks to queue
+[2024-11-18T19:31:19.734+0100] {logging_mixin.py:190} INFO - [2024-11-18T19:31:19.732+0100] {dagbag.py:588} INFO - Filling up the DagBag from /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T19:31:19.758+0100] {processor.py:927} WARNING - No viable dags retrieved from /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T19:31:19.778+0100] {processor.py:208} INFO - Processing /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py took 0.064 seconds
+[2024-11-18T19:32:13.928+0100] {processor.py:186} INFO - Started process (PID=132732) to work on /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T19:32:13.931+0100] {processor.py:914} INFO - Processing file /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py for tasks to queue
+[2024-11-18T19:32:13.936+0100] {logging_mixin.py:190} INFO - [2024-11-18T19:32:13.934+0100] {dagbag.py:588} INFO - Filling up the DagBag from /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T19:32:13.970+0100] {processor.py:927} WARNING - No viable dags retrieved from /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T19:32:13.994+0100] {processor.py:208} INFO - Processing /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py took 0.094 seconds
+[2024-11-18T19:33:10.277+0100] {processor.py:186} INFO - Started process (PID=132996) to work on /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T19:33:10.280+0100] {processor.py:914} INFO - Processing file /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py for tasks to queue
+[2024-11-18T19:33:10.286+0100] {logging_mixin.py:190} INFO - [2024-11-18T19:33:10.284+0100] {dagbag.py:588} INFO - Filling up the DagBag from /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T19:33:10.317+0100] {processor.py:927} WARNING - No viable dags retrieved from /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T19:33:10.343+0100] {processor.py:208} INFO - Processing /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py took 0.087 seconds
+[2024-11-18T19:34:01.841+0100] {processor.py:186} INFO - Started process (PID=133238) to work on /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T19:34:01.849+0100] {processor.py:914} INFO - Processing file /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py for tasks to queue
+[2024-11-18T19:34:01.856+0100] {logging_mixin.py:190} INFO - [2024-11-18T19:34:01.853+0100] {dagbag.py:588} INFO - Filling up the DagBag from /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T19:34:01.903+0100] {processor.py:927} WARNING - No viable dags retrieved from /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T19:34:01.931+0100] {processor.py:208} INFO - Processing /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py took 0.107 seconds
+[2024-11-18T19:34:53.502+0100] {processor.py:186} INFO - Started process (PID=133483) to work on /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T19:34:53.504+0100] {processor.py:914} INFO - Processing file /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py for tasks to queue
+[2024-11-18T19:34:53.507+0100] {logging_mixin.py:190} INFO - [2024-11-18T19:34:53.506+0100] {dagbag.py:588} INFO - Filling up the DagBag from /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T19:34:53.519+0100] {processor.py:927} WARNING - No viable dags retrieved from /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T19:34:53.536+0100] {processor.py:208} INFO - Processing /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py took 0.052 seconds
+[2024-11-18T19:48:34.863+0100] {processor.py:186} INFO - Started process (PID=133781) to work on /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T19:48:34.869+0100] {processor.py:914} INFO - Processing file /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py for tasks to queue
+[2024-11-18T19:48:34.874+0100] {logging_mixin.py:190} INFO - [2024-11-18T19:48:34.872+0100] {dagbag.py:588} INFO - Filling up the DagBag from /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T19:48:34.907+0100] {processor.py:927} WARNING - No viable dags retrieved from /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T19:48:34.936+0100] {processor.py:208} INFO - Processing /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py took 0.095 seconds
+[2024-11-18T19:49:34.890+0100] {processor.py:186} INFO - Started process (PID=134061) to work on /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T19:49:34.892+0100] {processor.py:914} INFO - Processing file /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py for tasks to queue
+[2024-11-18T19:49:34.896+0100] {logging_mixin.py:190} INFO - [2024-11-18T19:49:34.894+0100] {dagbag.py:588} INFO - Filling up the DagBag from /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T19:49:34.926+0100] {processor.py:927} WARNING - No viable dags retrieved from /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T19:49:34.970+0100] {processor.py:208} INFO - Processing /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py took 0.096 seconds
+[2024-11-18T19:50:33.345+0100] {processor.py:186} INFO - Started process (PID=134330) to work on /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T19:50:33.348+0100] {processor.py:914} INFO - Processing file /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py for tasks to queue
+[2024-11-18T19:50:33.352+0100] {logging_mixin.py:190} INFO - [2024-11-18T19:50:33.350+0100] {dagbag.py:588} INFO - Filling up the DagBag from /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T19:50:33.379+0100] {processor.py:927} WARNING - No viable dags retrieved from /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T19:50:33.400+0100] {processor.py:208} INFO - Processing /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py took 0.071 seconds
+[2024-11-18T19:51:29.898+0100] {processor.py:186} INFO - Started process (PID=134595) to work on /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T19:51:29.902+0100] {processor.py:914} INFO - Processing file /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py for tasks to queue
+[2024-11-18T19:51:29.908+0100] {logging_mixin.py:190} INFO - [2024-11-18T19:51:29.905+0100] {dagbag.py:588} INFO - Filling up the DagBag from /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T19:51:29.946+0100] {processor.py:927} WARNING - No viable dags retrieved from /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T19:51:29.984+0100] {processor.py:208} INFO - Processing /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py took 0.104 seconds
+[2024-11-18T19:52:24.818+0100] {processor.py:186} INFO - Started process (PID=134848) to work on /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T19:52:24.826+0100] {processor.py:914} INFO - Processing file /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py for tasks to queue
+[2024-11-18T19:52:24.836+0100] {logging_mixin.py:190} INFO - [2024-11-18T19:52:24.833+0100] {dagbag.py:588} INFO - Filling up the DagBag from /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T19:52:24.882+0100] {processor.py:927} WARNING - No viable dags retrieved from /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T19:52:24.930+0100] {processor.py:208} INFO - Processing /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py took 0.157 seconds
+[2024-11-18T19:53:22.396+0100] {processor.py:186} INFO - Started process (PID=135118) to work on /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T19:53:22.399+0100] {processor.py:914} INFO - Processing file /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py for tasks to queue
+[2024-11-18T19:53:22.405+0100] {logging_mixin.py:190} INFO - [2024-11-18T19:53:22.403+0100] {dagbag.py:588} INFO - Filling up the DagBag from /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T19:53:22.444+0100] {processor.py:927} WARNING - No viable dags retrieved from /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T19:53:22.480+0100] {processor.py:208} INFO - Processing /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py took 0.112 seconds
+[2024-11-18T19:54:21.169+0100] {processor.py:186} INFO - Started process (PID=135390) to work on /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T19:54:21.172+0100] {processor.py:914} INFO - Processing file /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py for tasks to queue
+[2024-11-18T19:54:21.178+0100] {logging_mixin.py:190} INFO - [2024-11-18T19:54:21.176+0100] {dagbag.py:588} INFO - Filling up the DagBag from /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T19:54:21.227+0100] {processor.py:927} WARNING - No viable dags retrieved from /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T19:54:21.273+0100] {processor.py:208} INFO - Processing /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py took 0.130 seconds
+[2024-11-18T19:55:17.398+0100] {processor.py:186} INFO - Started process (PID=135657) to work on /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T19:55:17.401+0100] {processor.py:914} INFO - Processing file /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py for tasks to queue
+[2024-11-18T19:55:17.405+0100] {logging_mixin.py:190} INFO - [2024-11-18T19:55:17.404+0100] {dagbag.py:588} INFO - Filling up the DagBag from /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T19:55:17.434+0100] {processor.py:927} WARNING - No viable dags retrieved from /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T19:55:17.456+0100] {processor.py:208} INFO - Processing /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py took 0.075 seconds
+[2024-11-18T19:56:11.230+0100] {processor.py:186} INFO - Started process (PID=135908) to work on /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T19:56:11.232+0100] {processor.py:914} INFO - Processing file /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py for tasks to queue
+[2024-11-18T19:56:11.236+0100] {logging_mixin.py:190} INFO - [2024-11-18T19:56:11.234+0100] {dagbag.py:588} INFO - Filling up the DagBag from /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T19:56:11.265+0100] {processor.py:927} WARNING - No viable dags retrieved from /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T19:56:11.290+0100] {processor.py:208} INFO - Processing /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py took 0.075 seconds
+[2024-11-18T19:57:04.896+0100] {processor.py:186} INFO - Started process (PID=136161) to work on /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T19:57:04.900+0100] {processor.py:914} INFO - Processing file /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py for tasks to queue
+[2024-11-18T19:57:04.906+0100] {logging_mixin.py:190} INFO - [2024-11-18T19:57:04.904+0100] {dagbag.py:588} INFO - Filling up the DagBag from /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T19:57:04.946+0100] {processor.py:927} WARNING - No viable dags retrieved from /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T19:57:04.998+0100] {processor.py:208} INFO - Processing /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py took 0.124 seconds
+[2024-11-18T19:57:58.265+0100] {processor.py:186} INFO - Started process (PID=136410) to work on /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T19:57:58.269+0100] {processor.py:914} INFO - Processing file /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py for tasks to queue
+[2024-11-18T19:57:58.274+0100] {logging_mixin.py:190} INFO - [2024-11-18T19:57:58.272+0100] {dagbag.py:588} INFO - Filling up the DagBag from /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T19:57:58.308+0100] {processor.py:927} WARNING - No viable dags retrieved from /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T19:57:58.362+0100] {processor.py:208} INFO - Processing /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py took 0.115 seconds
+[2024-11-18T19:58:58.226+0100] {processor.py:186} INFO - Started process (PID=136687) to work on /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T19:58:58.229+0100] {processor.py:914} INFO - Processing file /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py for tasks to queue
+[2024-11-18T19:58:58.233+0100] {logging_mixin.py:190} INFO - [2024-11-18T19:58:58.231+0100] {dagbag.py:588} INFO - Filling up the DagBag from /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T19:58:58.276+0100] {processor.py:927} WARNING - No viable dags retrieved from /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T19:58:58.312+0100] {processor.py:208} INFO - Processing /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py took 0.109 seconds
+[2024-11-18T19:59:54.365+0100] {processor.py:186} INFO - Started process (PID=136949) to work on /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T19:59:54.369+0100] {processor.py:914} INFO - Processing file /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py for tasks to queue
+[2024-11-18T19:59:54.374+0100] {logging_mixin.py:190} INFO - [2024-11-18T19:59:54.372+0100] {dagbag.py:588} INFO - Filling up the DagBag from /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T19:59:54.405+0100] {processor.py:927} WARNING - No viable dags retrieved from /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T19:59:54.436+0100] {processor.py:208} INFO - Processing /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py took 0.090 seconds
+[2024-11-18T20:00:48.954+0100] {processor.py:186} INFO - Started process (PID=137204) to work on /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T20:00:48.957+0100] {processor.py:914} INFO - Processing file /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py for tasks to queue
+[2024-11-18T20:00:48.961+0100] {logging_mixin.py:190} INFO - [2024-11-18T20:00:48.959+0100] {dagbag.py:588} INFO - Filling up the DagBag from /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T20:00:48.990+0100] {processor.py:927} WARNING - No viable dags retrieved from /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T20:00:49.026+0100] {processor.py:208} INFO - Processing /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py took 0.096 seconds
+[2024-11-18T20:01:44.137+0100] {processor.py:186} INFO - Started process (PID=137461) to work on /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T20:01:44.139+0100] {processor.py:914} INFO - Processing file /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py for tasks to queue
+[2024-11-18T20:01:44.144+0100] {logging_mixin.py:190} INFO - [2024-11-18T20:01:44.142+0100] {dagbag.py:588} INFO - Filling up the DagBag from /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T20:01:44.174+0100] {processor.py:927} WARNING - No viable dags retrieved from /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T20:01:44.202+0100] {processor.py:208} INFO - Processing /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py took 0.082 seconds
+[2024-11-18T20:02:40.052+0100] {processor.py:186} INFO - Started process (PID=137722) to work on /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T20:02:40.057+0100] {processor.py:914} INFO - Processing file /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py for tasks to queue
+[2024-11-18T20:02:40.062+0100] {logging_mixin.py:190} INFO - [2024-11-18T20:02:40.060+0100] {dagbag.py:588} INFO - Filling up the DagBag from /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T20:02:40.097+0100] {processor.py:927} WARNING - No viable dags retrieved from /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T20:02:40.129+0100] {processor.py:208} INFO - Processing /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py took 0.109 seconds
+[2024-11-18T20:03:35.129+0100] {processor.py:186} INFO - Started process (PID=137978) to work on /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T20:03:35.131+0100] {processor.py:914} INFO - Processing file /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py for tasks to queue
+[2024-11-18T20:03:35.155+0100] {logging_mixin.py:190} INFO - [2024-11-18T20:03:35.152+0100] {dagbag.py:588} INFO - Filling up the DagBag from /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T20:03:35.207+0100] {processor.py:927} WARNING - No viable dags retrieved from /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T20:03:35.246+0100] {processor.py:208} INFO - Processing /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py took 0.137 seconds
+[2024-11-18T20:04:31.501+0100] {processor.py:186} INFO - Started process (PID=138241) to work on /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T20:04:31.505+0100] {processor.py:914} INFO - Processing file /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py for tasks to queue
+[2024-11-18T20:04:31.511+0100] {logging_mixin.py:190} INFO - [2024-11-18T20:04:31.509+0100] {dagbag.py:588} INFO - Filling up the DagBag from /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T20:04:31.543+0100] {processor.py:927} WARNING - No viable dags retrieved from /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-18T20:04:31.569+0100] {processor.py:208} INFO - Processing /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py took 0.087 seconds
+[2024-11-19T00:45:25.683+0100] {processor.py:186} INFO - Started process (PID=204850) to work on /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-19T00:45:25.686+0100] {processor.py:914} INFO - Processing file /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py for tasks to queue
+[2024-11-19T00:45:25.693+0100] {logging_mixin.py:190} INFO - [2024-11-19T00:45:25.691+0100] {dagbag.py:588} INFO - Filling up the DagBag from /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-19T00:45:25.728+0100] {processor.py:927} WARNING - No viable dags retrieved from /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-19T00:45:25.759+0100] {processor.py:208} INFO - Processing /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py took 0.102 seconds
+[2024-11-19T00:47:17.623+0100] {processor.py:186} INFO - Started process (PID=205357) to work on /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-19T00:47:17.628+0100] {processor.py:914} INFO - Processing file /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py for tasks to queue
+[2024-11-19T00:47:17.642+0100] {logging_mixin.py:190} INFO - [2024-11-19T00:47:17.638+0100] {dagbag.py:588} INFO - Filling up the DagBag from /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-19T00:47:17.710+0100] {processor.py:927} WARNING - No viable dags retrieved from /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-19T00:47:17.756+0100] {processor.py:208} INFO - Processing /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py took 0.169 seconds
+[2024-11-19T00:48:33.132+0100] {processor.py:186} INFO - Started process (PID=205700) to work on /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-19T00:48:33.135+0100] {processor.py:914} INFO - Processing file /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py for tasks to queue
+[2024-11-19T00:48:33.142+0100] {logging_mixin.py:190} INFO - [2024-11-19T00:48:33.140+0100] {dagbag.py:588} INFO - Filling up the DagBag from /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-19T00:48:33.181+0100] {processor.py:927} WARNING - No viable dags retrieved from /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-19T00:48:33.225+0100] {processor.py:208} INFO - Processing /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py took 0.121 seconds
+[2024-11-19T00:49:54.980+0100] {processor.py:186} INFO - Started process (PID=206066) to work on /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-19T00:49:54.987+0100] {processor.py:914} INFO - Processing file /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py for tasks to queue
+[2024-11-19T00:49:54.996+0100] {logging_mixin.py:190} INFO - [2024-11-19T00:49:54.993+0100] {dagbag.py:588} INFO - Filling up the DagBag from /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-19T00:49:55.056+0100] {processor.py:927} WARNING - No viable dags retrieved from /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-19T00:49:55.105+0100] {processor.py:208} INFO - Processing /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py took 0.156 seconds
+[2024-11-19T00:51:24.238+0100] {processor.py:186} INFO - Started process (PID=206471) to work on /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-19T00:51:24.244+0100] {processor.py:914} INFO - Processing file /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py for tasks to queue
+[2024-11-19T00:51:24.253+0100] {logging_mixin.py:190} INFO - [2024-11-19T00:51:24.250+0100] {dagbag.py:588} INFO - Filling up the DagBag from /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-19T00:51:24.326+0100] {processor.py:927} WARNING - No viable dags retrieved from /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-19T00:51:24.376+0100] {processor.py:208} INFO - Processing /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py took 0.167 seconds
+[2024-11-19T00:52:38.370+0100] {processor.py:186} INFO - Started process (PID=206827) to work on /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-19T00:52:38.376+0100] {processor.py:914} INFO - Processing file /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py for tasks to queue
+[2024-11-19T00:52:38.384+0100] {logging_mixin.py:190} INFO - [2024-11-19T00:52:38.382+0100] {dagbag.py:588} INFO - Filling up the DagBag from /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-19T00:52:38.468+0100] {processor.py:927} WARNING - No viable dags retrieved from /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-19T00:52:38.515+0100] {processor.py:208} INFO - Processing /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py took 0.167 seconds
+[2024-11-19T00:53:48.685+0100] {processor.py:186} INFO - Started process (PID=207146) to work on /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-19T00:53:48.689+0100] {processor.py:914} INFO - Processing file /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py for tasks to queue
+[2024-11-19T00:53:48.694+0100] {logging_mixin.py:190} INFO - [2024-11-19T00:53:48.693+0100] {dagbag.py:588} INFO - Filling up the DagBag from /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-19T00:53:48.720+0100] {processor.py:927} WARNING - No viable dags retrieved from /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-19T00:53:48.744+0100] {processor.py:208} INFO - Processing /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py took 0.075 seconds
+[2024-11-19T00:55:01.433+0100] {processor.py:186} INFO - Started process (PID=207487) to work on /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-19T00:55:01.435+0100] {processor.py:914} INFO - Processing file /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py for tasks to queue
+[2024-11-19T00:55:01.439+0100] {logging_mixin.py:190} INFO - [2024-11-19T00:55:01.438+0100] {dagbag.py:588} INFO - Filling up the DagBag from /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-19T00:55:01.490+0100] {processor.py:927} WARNING - No viable dags retrieved from /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-19T00:55:01.513+0100] {processor.py:208} INFO - Processing /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py took 0.093 seconds
+[2024-11-19T00:56:33.101+0100] {processor.py:186} INFO - Started process (PID=207898) to work on /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-19T00:56:33.105+0100] {processor.py:914} INFO - Processing file /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py for tasks to queue
+[2024-11-19T00:56:33.116+0100] {logging_mixin.py:190} INFO - [2024-11-19T00:56:33.110+0100] {dagbag.py:588} INFO - Filling up the DagBag from /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-19T00:56:33.159+0100] {processor.py:927} WARNING - No viable dags retrieved from /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-19T00:56:33.323+0100] {processor.py:208} INFO - Processing /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py took 0.268 seconds
+[2024-11-19T00:57:44.835+0100] {processor.py:186} INFO - Started process (PID=208227) to work on /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-19T00:57:44.841+0100] {processor.py:914} INFO - Processing file /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py for tasks to queue
+[2024-11-19T00:57:44.852+0100] {logging_mixin.py:190} INFO - [2024-11-19T00:57:44.848+0100] {dagbag.py:588} INFO - Filling up the DagBag from /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-19T00:57:44.901+0100] {processor.py:927} WARNING - No viable dags retrieved from /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-19T00:57:44.940+0100] {processor.py:208} INFO - Processing /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py took 0.143 seconds
+[2024-11-19T00:58:57.438+0100] {processor.py:186} INFO - Started process (PID=208553) to work on /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-19T00:58:57.442+0100] {processor.py:914} INFO - Processing file /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py for tasks to queue
+[2024-11-19T00:58:57.452+0100] {logging_mixin.py:190} INFO - [2024-11-19T00:58:57.449+0100] {dagbag.py:588} INFO - Filling up the DagBag from /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-19T00:58:57.513+0100] {processor.py:927} WARNING - No viable dags retrieved from /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py
+[2024-11-19T00:58:57.557+0100] {processor.py:208} INFO - Processing /mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py took 0.148 seconds

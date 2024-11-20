@@ -1,0 +1,174 @@
+[2024-11-18T18:45:46.518+0100] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-11-18T18:45:46.545+0100] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_pipeline.load_data manual__2024-11-18T15:30:43.367457+00:00 [queued]>
+[2024-11-18T18:45:46.562+0100] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_pipeline.load_data manual__2024-11-18T15:30:43.367457+00:00 [queued]>
+[2024-11-18T18:45:46.564+0100] {taskinstance.py:2865} INFO - Starting attempt 1 of 2
+[2024-11-18T18:45:46.612+0100] {taskinstance.py:2888} INFO - Executing <Task(PythonOperator): load_data> on 2024-11-18 15:30:43.367457+00:00
+[2024-11-18T18:45:46.620+0100] {standard_task_runner.py:72} INFO - Started process 120294 to run task
+[2024-11-18T18:45:46.638+0100] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'etl_pipeline', 'load_data', 'manual__2024-11-18T15:30:43.367457+00:00', '--job-id', '12', '--raw', '--subdir', 'DAGS_FOLDER/country_dag.py', '--cfg-path', '/tmp/tmpv62yli3e']
+[2024-11-18T18:45:46.641+0100] {standard_task_runner.py:105} INFO - Job 12: Subtask load_data
+[2024-11-18T18:45:46.826+0100] {task_command.py:467} INFO - Running <TaskInstance: etl_pipeline.load_data manual__2024-11-18T15:30:43.367457+00:00 [running]> on host zainab.
+[2024-11-18T18:45:47.176+0100] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='etl_pipeline' AIRFLOW_CTX_TASK_ID='load_data' AIRFLOW_CTX_EXECUTION_DATE='2024-11-18T15:30:43.367457+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-11-18T15:30:43.367457+00:00'
+[2024-11-18T18:45:47.182+0100] {logging_mixin.py:190} INFO - Task instance is in running state
+[2024-11-18T18:45:47.184+0100] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2024-11-18T18:45:47.186+0100] {logging_mixin.py:190} INFO - Current task name:load_data state:running start_date:2024-11-18 17:45:46.547354+00:00
+[2024-11-18T18:45:47.189+0100] {logging_mixin.py:190} INFO - Dag name:etl_pipeline and current dag run status:running
+[2024-11-18T18:45:47.191+0100] {taskinstance.py:731} INFO - ::endgroup::
+[2024-11-18T18:45:47.226+0100] {base.py:84} INFO - Retrieving connection 'aws_default'
+[2024-11-18T18:46:53.740+0100] {load.py:33} ERROR - Failed to upload file to S3: Unable to locate credentials
+[2024-11-18T18:46:53.754+0100] {taskinstance.py:3310} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/mnt/c/Users/zaina/Documents/Core_Data_Engineering/airflow/airflow_coresentiment_Data_pipeline/airflow/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/mnt/c/Users/zaina/Documents/Core_Data_Engineering/airflow/airflow_coresentiment_Data_pipeline/airflow/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+  File "/mnt/c/Users/zaina/Documents/Core_Data_Engineering/airflow/airflow_coresentiment_Data_pipeline/airflow/lib/python3.10/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+  File "/mnt/c/Users/zaina/Documents/Core_Data_Engineering/airflow/airflow_coresentiment_Data_pipeline/airflow/lib/python3.10/site-packages/airflow/models/baseoperator.py", line 406, in wrapper
+    return func(self, *args, **kwargs)
+  File "/mnt/c/Users/zaina/Documents/Core_Data_Engineering/airflow/airflow_coresentiment_Data_pipeline/airflow/lib/python3.10/site-packages/airflow/operators/python.py", line 238, in execute
+    return_value = self.execute_callable()
+  File "/mnt/c/Users/zaina/Documents/Core_Data_Engineering/airflow/airflow_coresentiment_Data_pipeline/airflow/lib/python3.10/site-packages/airflow/operators/python.py", line 256, in execute_callable
+    return runner.run(*self.op_args, **self.op_kwargs)
+  File "/mnt/c/Users/zaina/Documents/Core_Data_Engineering/airflow/airflow_coresentiment_Data_pipeline/airflow/lib/python3.10/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+  File "/mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py", line 24, in load_data
+    s3_hook.load_file(
+  File "/mnt/c/Users/zaina/Documents/Core_Data_Engineering/airflow/airflow_coresentiment_Data_pipeline/airflow/lib/python3.10/site-packages/airflow/providers/amazon/aws/hooks/s3.py", line 152, in wrapper
+    return func(*bound_args.args, **bound_args.kwargs)
+  File "/mnt/c/Users/zaina/Documents/Core_Data_Engineering/airflow/airflow_coresentiment_Data_pipeline/airflow/lib/python3.10/site-packages/airflow/providers/amazon/aws/hooks/s3.py", line 125, in wrapper
+    return func(*bound_args.args, **bound_args.kwargs)
+  File "/mnt/c/Users/zaina/Documents/Core_Data_Engineering/airflow/airflow_coresentiment_Data_pipeline/airflow/lib/python3.10/site-packages/airflow/providers/amazon/aws/hooks/s3.py", line 1134, in load_file
+    client.upload_file(
+  File "/mnt/c/Users/zaina/Documents/Core_Data_Engineering/airflow/airflow_coresentiment_Data_pipeline/airflow/lib/python3.10/site-packages/boto3/s3/inject.py", line 145, in upload_file
+    return transfer.upload_file(
+  File "/mnt/c/Users/zaina/Documents/Core_Data_Engineering/airflow/airflow_coresentiment_Data_pipeline/airflow/lib/python3.10/site-packages/boto3/s3/transfer.py", line 372, in upload_file
+    future.result()
+  File "/mnt/c/Users/zaina/Documents/Core_Data_Engineering/airflow/airflow_coresentiment_Data_pipeline/airflow/lib/python3.10/site-packages/s3transfer/futures.py", line 103, in result
+    return self._coordinator.result()
+  File "/mnt/c/Users/zaina/Documents/Core_Data_Engineering/airflow/airflow_coresentiment_Data_pipeline/airflow/lib/python3.10/site-packages/s3transfer/futures.py", line 264, in result
+    raise self._exception
+  File "/mnt/c/Users/zaina/Documents/Core_Data_Engineering/airflow/airflow_coresentiment_Data_pipeline/airflow/lib/python3.10/site-packages/s3transfer/tasks.py", line 135, in __call__
+    return self._execute_main(kwargs)
+  File "/mnt/c/Users/zaina/Documents/Core_Data_Engineering/airflow/airflow_coresentiment_Data_pipeline/airflow/lib/python3.10/site-packages/s3transfer/tasks.py", line 158, in _execute_main
+    return_value = self._main(**kwargs)
+  File "/mnt/c/Users/zaina/Documents/Core_Data_Engineering/airflow/airflow_coresentiment_Data_pipeline/airflow/lib/python3.10/site-packages/s3transfer/upload.py", line 762, in _main
+    client.put_object(Bucket=bucket, Key=key, Body=body, **extra_args)
+  File "/mnt/c/Users/zaina/Documents/Core_Data_Engineering/airflow/airflow_coresentiment_Data_pipeline/airflow/lib/python3.10/site-packages/botocore/client.py", line 569, in _api_call
+    return self._make_api_call(operation_name, kwargs)
+  File "/mnt/c/Users/zaina/Documents/Core_Data_Engineering/airflow/airflow_coresentiment_Data_pipeline/airflow/lib/python3.10/site-packages/botocore/client.py", line 1005, in _make_api_call
+    http, parsed_response = self._make_request(
+  File "/mnt/c/Users/zaina/Documents/Core_Data_Engineering/airflow/airflow_coresentiment_Data_pipeline/airflow/lib/python3.10/site-packages/botocore/client.py", line 1029, in _make_request
+    return self._endpoint.make_request(operation_model, request_dict)
+  File "/mnt/c/Users/zaina/Documents/Core_Data_Engineering/airflow/airflow_coresentiment_Data_pipeline/airflow/lib/python3.10/site-packages/botocore/endpoint.py", line 119, in make_request
+    return self._send_request(request_dict, operation_model)
+  File "/mnt/c/Users/zaina/Documents/Core_Data_Engineering/airflow/airflow_coresentiment_Data_pipeline/airflow/lib/python3.10/site-packages/botocore/endpoint.py", line 196, in _send_request
+    request = self.create_request(request_dict, operation_model)
+  File "/mnt/c/Users/zaina/Documents/Core_Data_Engineering/airflow/airflow_coresentiment_Data_pipeline/airflow/lib/python3.10/site-packages/botocore/endpoint.py", line 132, in create_request
+    self._event_emitter.emit(
+  File "/mnt/c/Users/zaina/Documents/Core_Data_Engineering/airflow/airflow_coresentiment_Data_pipeline/airflow/lib/python3.10/site-packages/botocore/hooks.py", line 412, in emit
+    return self._emitter.emit(aliased_event_name, **kwargs)
+  File "/mnt/c/Users/zaina/Documents/Core_Data_Engineering/airflow/airflow_coresentiment_Data_pipeline/airflow/lib/python3.10/site-packages/botocore/hooks.py", line 256, in emit
+    return self._emit(event_name, kwargs)
+  File "/mnt/c/Users/zaina/Documents/Core_Data_Engineering/airflow/airflow_coresentiment_Data_pipeline/airflow/lib/python3.10/site-packages/botocore/hooks.py", line 239, in _emit
+    response = handler(**kwargs)
+  File "/mnt/c/Users/zaina/Documents/Core_Data_Engineering/airflow/airflow_coresentiment_Data_pipeline/airflow/lib/python3.10/site-packages/botocore/signers.py", line 105, in handler
+    return self.sign(operation_name, request)
+  File "/mnt/c/Users/zaina/Documents/Core_Data_Engineering/airflow/airflow_coresentiment_Data_pipeline/airflow/lib/python3.10/site-packages/botocore/signers.py", line 197, in sign
+    auth.add_auth(request)
+  File "/mnt/c/Users/zaina/Documents/Core_Data_Engineering/airflow/airflow_coresentiment_Data_pipeline/airflow/lib/python3.10/site-packages/botocore/auth.py", line 423, in add_auth
+    raise NoCredentialsError()
+botocore.exceptions.NoCredentialsError: Unable to locate credentials
+[2024-11-18T18:46:54.772+0100] {logging_mixin.py:190} INFO - Task instance in failure state
+[2024-11-18T18:46:54.777+0100] {logging_mixin.py:190} INFO - Task start:2024-11-18 17:45:46.547354+00:00 end:2024-11-18 17:46:54.769533+00:00 duration:68.222179
+[2024-11-18T18:46:54.788+0100] {logging_mixin.py:190} INFO - Task:<Task(PythonOperator): load_data> dag:<DAG: etl_pipeline> dagrun:<DagRun etl_pipeline @ 2024-11-18 15:30:43.367457+00:00: manual__2024-11-18T15:30:43.367457+00:00, state:running, queued_at: 2024-11-18 17:40:36.084890+00:00. externally triggered: True>
+[2024-11-18T18:46:54.806+0100] {logging_mixin.py:190} INFO - Failure caused by Unable to locate credentials
+[2024-11-18T18:46:54.819+0100] {taskinstance.py:1225} INFO - Marking task as UP_FOR_RETRY. dag_id=etl_pipeline, task_id=load_data, run_id=manual__2024-11-18T15:30:43.367457+00:00, execution_date=20241118T153043, start_date=20241118T174546, end_date=20241118T174654
+[2024-11-18T18:46:54.935+0100] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-11-18T18:46:54.940+0100] {standard_task_runner.py:124} ERROR - Failed to execute job 12 for task load_data (Unable to locate credentials; 120294)
+Traceback (most recent call last):
+  File "/mnt/c/Users/zaina/Documents/Core_Data_Engineering/airflow/airflow_coresentiment_Data_pipeline/airflow/lib/python3.10/site-packages/airflow/task/task_runner/standard_task_runner.py", line 117, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+  File "/mnt/c/Users/zaina/Documents/Core_Data_Engineering/airflow/airflow_coresentiment_Data_pipeline/airflow/lib/python3.10/site-packages/airflow/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+  File "/mnt/c/Users/zaina/Documents/Core_Data_Engineering/airflow/airflow_coresentiment_Data_pipeline/airflow/lib/python3.10/site-packages/airflow/utils/cli.py", line 115, in wrapper
+    return f(*args, **kwargs)
+  File "/mnt/c/Users/zaina/Documents/Core_Data_Engineering/airflow/airflow_coresentiment_Data_pipeline/airflow/lib/python3.10/site-packages/airflow/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+  File "/mnt/c/Users/zaina/Documents/Core_Data_Engineering/airflow/airflow_coresentiment_Data_pipeline/airflow/lib/python3.10/site-packages/airflow/cli/commands/task_command.py", line 256, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+  File "/mnt/c/Users/zaina/Documents/Core_Data_Engineering/airflow/airflow_coresentiment_Data_pipeline/airflow/lib/python3.10/site-packages/airflow/cli/commands/task_command.py", line 341, in _run_raw_task
+    return ti._run_raw_task(
+  File "/mnt/c/Users/zaina/Documents/Core_Data_Engineering/airflow/airflow_coresentiment_Data_pipeline/airflow/lib/python3.10/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/mnt/c/Users/zaina/Documents/Core_Data_Engineering/airflow/airflow_coresentiment_Data_pipeline/airflow/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 3004, in _run_raw_task
+    return _run_raw_task(
+  File "/mnt/c/Users/zaina/Documents/Core_Data_Engineering/airflow/airflow_coresentiment_Data_pipeline/airflow/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 273, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/mnt/c/Users/zaina/Documents/Core_Data_Engineering/airflow/airflow_coresentiment_Data_pipeline/airflow/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 3158, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+  File "/mnt/c/Users/zaina/Documents/Core_Data_Engineering/airflow/airflow_coresentiment_Data_pipeline/airflow/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 3182, in _execute_task
+    return _execute_task(self, context, task_orig)
+  File "/mnt/c/Users/zaina/Documents/Core_Data_Engineering/airflow/airflow_coresentiment_Data_pipeline/airflow/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/mnt/c/Users/zaina/Documents/Core_Data_Engineering/airflow/airflow_coresentiment_Data_pipeline/airflow/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+  File "/mnt/c/Users/zaina/Documents/Core_Data_Engineering/airflow/airflow_coresentiment_Data_pipeline/airflow/lib/python3.10/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+  File "/mnt/c/Users/zaina/Documents/Core_Data_Engineering/airflow/airflow_coresentiment_Data_pipeline/airflow/lib/python3.10/site-packages/airflow/models/baseoperator.py", line 406, in wrapper
+    return func(self, *args, **kwargs)
+  File "/mnt/c/Users/zaina/Documents/Core_Data_Engineering/airflow/airflow_coresentiment_Data_pipeline/airflow/lib/python3.10/site-packages/airflow/operators/python.py", line 238, in execute
+    return_value = self.execute_callable()
+  File "/mnt/c/Users/zaina/Documents/Core_Data_Engineering/airflow/airflow_coresentiment_Data_pipeline/airflow/lib/python3.10/site-packages/airflow/operators/python.py", line 256, in execute_callable
+    return runner.run(*self.op_args, **self.op_kwargs)
+  File "/mnt/c/Users/zaina/Documents/Core_Data_Engineering/airflow/airflow_coresentiment_Data_pipeline/airflow/lib/python3.10/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+  File "/mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/airflow/dags/scripts/load.py", line 24, in load_data
+    s3_hook.load_file(
+  File "/mnt/c/Users/zaina/Documents/Core_Data_Engineering/airflow/airflow_coresentiment_Data_pipeline/airflow/lib/python3.10/site-packages/airflow/providers/amazon/aws/hooks/s3.py", line 152, in wrapper
+    return func(*bound_args.args, **bound_args.kwargs)
+  File "/mnt/c/Users/zaina/Documents/Core_Data_Engineering/airflow/airflow_coresentiment_Data_pipeline/airflow/lib/python3.10/site-packages/airflow/providers/amazon/aws/hooks/s3.py", line 125, in wrapper
+    return func(*bound_args.args, **bound_args.kwargs)
+  File "/mnt/c/Users/zaina/Documents/Core_Data_Engineering/airflow/airflow_coresentiment_Data_pipeline/airflow/lib/python3.10/site-packages/airflow/providers/amazon/aws/hooks/s3.py", line 1134, in load_file
+    client.upload_file(
+  File "/mnt/c/Users/zaina/Documents/Core_Data_Engineering/airflow/airflow_coresentiment_Data_pipeline/airflow/lib/python3.10/site-packages/boto3/s3/inject.py", line 145, in upload_file
+    return transfer.upload_file(
+  File "/mnt/c/Users/zaina/Documents/Core_Data_Engineering/airflow/airflow_coresentiment_Data_pipeline/airflow/lib/python3.10/site-packages/boto3/s3/transfer.py", line 372, in upload_file
+    future.result()
+  File "/mnt/c/Users/zaina/Documents/Core_Data_Engineering/airflow/airflow_coresentiment_Data_pipeline/airflow/lib/python3.10/site-packages/s3transfer/futures.py", line 103, in result
+    return self._coordinator.result()
+  File "/mnt/c/Users/zaina/Documents/Core_Data_Engineering/airflow/airflow_coresentiment_Data_pipeline/airflow/lib/python3.10/site-packages/s3transfer/futures.py", line 264, in result
+    raise self._exception
+  File "/mnt/c/Users/zaina/Documents/Core_Data_Engineering/airflow/airflow_coresentiment_Data_pipeline/airflow/lib/python3.10/site-packages/s3transfer/tasks.py", line 135, in __call__
+    return self._execute_main(kwargs)
+  File "/mnt/c/Users/zaina/Documents/Core_Data_Engineering/airflow/airflow_coresentiment_Data_pipeline/airflow/lib/python3.10/site-packages/s3transfer/tasks.py", line 158, in _execute_main
+    return_value = self._main(**kwargs)
+  File "/mnt/c/Users/zaina/Documents/Core_Data_Engineering/airflow/airflow_coresentiment_Data_pipeline/airflow/lib/python3.10/site-packages/s3transfer/upload.py", line 762, in _main
+    client.put_object(Bucket=bucket, Key=key, Body=body, **extra_args)
+  File "/mnt/c/Users/zaina/Documents/Core_Data_Engineering/airflow/airflow_coresentiment_Data_pipeline/airflow/lib/python3.10/site-packages/botocore/client.py", line 569, in _api_call
+    return self._make_api_call(operation_name, kwargs)
+  File "/mnt/c/Users/zaina/Documents/Core_Data_Engineering/airflow/airflow_coresentiment_Data_pipeline/airflow/lib/python3.10/site-packages/botocore/client.py", line 1005, in _make_api_call
+    http, parsed_response = self._make_request(
+  File "/mnt/c/Users/zaina/Documents/Core_Data_Engineering/airflow/airflow_coresentiment_Data_pipeline/airflow/lib/python3.10/site-packages/botocore/client.py", line 1029, in _make_request
+    return self._endpoint.make_request(operation_model, request_dict)
+  File "/mnt/c/Users/zaina/Documents/Core_Data_Engineering/airflow/airflow_coresentiment_Data_pipeline/airflow/lib/python3.10/site-packages/botocore/endpoint.py", line 119, in make_request
+    return self._send_request(request_dict, operation_model)
+  File "/mnt/c/Users/zaina/Documents/Core_Data_Engineering/airflow/airflow_coresentiment_Data_pipeline/airflow/lib/python3.10/site-packages/botocore/endpoint.py", line 196, in _send_request
+    request = self.create_request(request_dict, operation_model)
+  File "/mnt/c/Users/zaina/Documents/Core_Data_Engineering/airflow/airflow_coresentiment_Data_pipeline/airflow/lib/python3.10/site-packages/botocore/endpoint.py", line 132, in create_request
+    self._event_emitter.emit(
+  File "/mnt/c/Users/zaina/Documents/Core_Data_Engineering/airflow/airflow_coresentiment_Data_pipeline/airflow/lib/python3.10/site-packages/botocore/hooks.py", line 412, in emit
+    return self._emitter.emit(aliased_event_name, **kwargs)
+  File "/mnt/c/Users/zaina/Documents/Core_Data_Engineering/airflow/airflow_coresentiment_Data_pipeline/airflow/lib/python3.10/site-packages/botocore/hooks.py", line 256, in emit
+    return self._emit(event_name, kwargs)
+  File "/mnt/c/Users/zaina/Documents/Core_Data_Engineering/airflow/airflow_coresentiment_Data_pipeline/airflow/lib/python3.10/site-packages/botocore/hooks.py", line 239, in _emit
+    response = handler(**kwargs)
+  File "/mnt/c/Users/zaina/Documents/Core_Data_Engineering/airflow/airflow_coresentiment_Data_pipeline/airflow/lib/python3.10/site-packages/botocore/signers.py", line 105, in handler
+    return self.sign(operation_name, request)
+  File "/mnt/c/Users/zaina/Documents/Core_Data_Engineering/airflow/airflow_coresentiment_Data_pipeline/airflow/lib/python3.10/site-packages/botocore/signers.py", line 197, in sign
+    auth.add_auth(request)
+  File "/mnt/c/Users/zaina/Documents/Core_Data_Engineering/airflow/airflow_coresentiment_Data_pipeline/airflow/lib/python3.10/site-packages/botocore/auth.py", line 423, in add_auth
+    raise NoCredentialsError()
+botocore.exceptions.NoCredentialsError: Unable to locate credentials
+[2024-11-18T18:46:55.073+0100] {local_task_job_runner.py:266} INFO - Task exited with return code 1
+[2024-11-18T18:46:55.187+0100] {taskinstance.py:3900} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-11-18T18:46:55.194+0100] {local_task_job_runner.py:245} INFO - ::endgroup::
