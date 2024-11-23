@@ -18,34 +18,34 @@ def extract_data(**kwargs):
     data = response.json()
     return data
 
-bucket_name = "zainycap-bucket"
-key = "data/country_data_2024-11-18.parquet"
+BUCKET_NAME = "zainycap-bucket"
+KEY = "data/country_data_2024-11-18.parquet"
 # Define a temporary output file path
 output_file = "/mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/AIRFLOW/dags/tmp/data.parquet"
 
 # Extracting Data from S3 bucket to Snowflake Database (Parquet file)
 
-def extract_data_s3(bucket_name, key, output_path, aws_conn_id="aws_default"):
+def extract_data_s3(BUCKET_NAME, KEY, OUTPUT_PATH, AWS_CONN_ID="aws_default"):
     """
     Extracts Parquet data from an S3 bucket, saves it locally, and returns the file path.
     
     Args:
-        bucket_name (str): Name of the S3 bucket.
-        key (str): Key (file path) of the Parquet file in S3.
-        output_path (str): Local path where the Parquet file should be saved.
-        aws_conn_id (str): Airflow connection ID for AWS (default: 'aws_default').
+        BUCKET_NAME (str): Name of the S3 bucket.
+        KEY (str): KEY (file path) of the Parquet file in S3.
+        OUTPUT_PATH (str): Local path where the Parquet file should be saved.
+        AWS_CONN_ID (str): Airflow connection ID for AWS (default: 'aws_default').
 
     Returns:
         str: Path to the saved local Parquet file.
     """
     try:
         # Use S3Hook to interact with AWS S3
-        s3_hook = S3Hook(aws_conn_id=aws_conn_id)
+        s3_hook = S3Hook(AWS_CONN_ID=AWS_CONN_ID)
         
         # Download file from S3 to memory
-        file_obj = s3_hook.get_key(key, bucket_name)
+        file_obj = s3_hook.get_key(KEY, BUCKET_NAME)
         if not file_obj:
-            raise AirflowException(f"File {key} not found in bucket {bucket_name}")
+            raise AirflowException(f"File {KEY} not found in bucket {BUCKET_NAME}")
         
         file_content = file_obj.get()["Body"].read()
         buffer = BytesIO(file_content)
@@ -54,11 +54,11 @@ def extract_data_s3(bucket_name, key, output_path, aws_conn_id="aws_default"):
         table = pq.read_table(buffer)
         
         # Ensure output directory exists
-        os.makedirs(os.path.dirname(output_path), exist_ok=True)
+        os.makedirs(os.path.dirname(OUTPUT_PATH), exist_ok=True)
         
         # Save the Parquet file locally
-        pq.write_table(table, output_path)
+        pq.write_table(table, OUTPUT_PATH)
         
-        return output_path  # Return the path to the saved Parquet file
+        return OUTPUT_PATH  # Return the path to the saved Parquet file
     except Exception as e:
         raise AirflowException(f"Failed to extract data from S3: {str(e)}")

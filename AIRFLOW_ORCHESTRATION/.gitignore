@@ -4,3 +4,5 @@
 *webserver_config.py
 *config.py
 *.pid
+*logs
+*airflow-webserver*
