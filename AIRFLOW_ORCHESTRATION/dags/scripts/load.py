@@ -30,7 +30,7 @@ def load_data(ti, **kwargs):
     except Exception as e:
         logging.error(f"Failed to upload file to S3: {e}")
         raise
-#Loading file from S3 Bucket to Snowflake Database
+# Loading file from S3 Bucket to Snowflake Database
 # Set up logging
 
 
@@ -68,13 +68,15 @@ def load_data_to_snowflake(
             # Table does not exist, create it
             create_table_query = f"""
             CREATE TABLE {SCHEMA_NAME}.{TABLE_NAME} (
-                {', '.join([f"{col} STRING" for col in columns])},  -- Assuming all columns are STRING
+                {', '.join([f"{col} STRING" for col in columns])},
                 created_at TIMESTAMP_NTZ DEFAULT CURRENT_TIMESTAMP,
                 updated_at TIMESTAMP_NTZ DEFAULT CURRENT_TIMESTAMP
             );
             """
             snowflake_hook.run(create_table_query)
-            logger.info(f"Table {SCHEMA_NAME}.{TABLE_NAME} created successfully.")
+            logger.info(
+                f"Table {SCHEMA_NAME}.{TABLE_NAME} created successfully."
+            )
         # Stage the data into a temporary table
         temp_table = f"{TABLE_NAME}_temp"
         create_temp_table_query = f"""
@@ -95,14 +97,22 @@ def load_data_to_snowflake(
         merge_query = f"""
         MERGE INTO {SCHEMA_NAME}.{TABLE_NAME} AS target
         USING {SCHEMA_NAME}.{temp_table} AS source
-        ON target.{UNIQUE_COLUMN} = source.{UNIQUE_COLUMN}  -- Replace with the unique KEY column(s)
+        ON target.{UNIQUE_COLUMN} = source.{UNIQUE_COLUMN}
         WHEN MATCHED THEN 
-            UPDATE SET {', '.join([f"target.{col} = source.{col}" for col in columns])}
+            UPDATE SET {', '.join(
+                [f"target.{col} = source.{col}" for col in columns]
+            )}
         WHEN NOT MATCHED THEN
-            INSERT ({column_str}) VALUES ({', '.join([f"source.{col}" for col in columns])});
+         INSERT (
+    {column_str}
+) VALUES (
+    {', '.join([f"source.{col}" for col in columns])}
+);
         """
         snowflake_hook.run(merge_query)
-        logger.info(f"Data merged into {SCHEMA_NAME}.{TABLE_NAME} successfully.")
+        logger.info(
+            f"Data merged into {SCHEMA_NAME}.{TABLE_NAME} successfully."
+        )
     except Exception as e:
         logger.error(f"Error in load_data_to_snowflake: {e}")
         raise
