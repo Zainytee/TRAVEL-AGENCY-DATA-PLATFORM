@@ -1,13 +1,12 @@
 import requests
 import pyarrow.parquet as pq
-import boto3
 from io import BytesIO
 from airflow.providers.amazon.aws.hooks.s3 import S3Hook
 from airflow.exceptions import AirflowException
 import os
 
 
-#Extracting Data from REST API to S3 Bucket
+# Extracting Data from REST API to S3 Bucket
 def extract_data(**kwargs):
     """
     Extract data from the Country REST API.
@@ -18,16 +17,21 @@ def extract_data(**kwargs):
     data = response.json()
     return data
 
+
 BUCKET_NAME = "zainycap-bucket"
 KEY = "data/country_data_2024-11-18.parquet"
 # Define a temporary output file path
-output_file = "/mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/AIRFLOW/dags/tmp/data.parquet"
-
+output_file = (
+    "/mnt/c/Users/zaina/Documents/Core_Data_Engineering"
+    "/capstone_project/AIRFLOW_ORCHESTRATION/dags/tmp/data.parquet"
+)
 # Extracting Data from S3 bucket to Snowflake Database (Parquet file)
+
 
 def extract_data_s3(BUCKET_NAME, KEY, OUTPUT_PATH, AWS_CONN_ID="aws_default"):
     """
-    Extracts Parquet data from an S3 bucket, saves it locally, and returns the file path.
+    Extracts Parquet data from an S3 bucket,
+    saves it locally, and returns the file path.
     
     Args:
         BUCKET_NAME (str): Name of the S3 bucket.
