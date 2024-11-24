@@ -27,19 +27,19 @@ with DAG(
     start_date=datetime(2024, 11, 17),
     catchup=False,
 ) as dag:
-    
+    # Extract from the rest api.
     extract_task = PythonOperator(
         task_id="extract_data",
         python_callable=extract_data,
         provide_context=True
     )
-
+    
     transform_task = PythonOperator(
         task_id="transform_data",
         python_callable=transform_data,
         provide_context=True
     )
-
+    
     load_task = PythonOperator(
         task_id="load_data",
         python_callable=load_data,
