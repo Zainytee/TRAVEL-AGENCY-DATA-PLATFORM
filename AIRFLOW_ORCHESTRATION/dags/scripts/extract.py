@@ -32,37 +32,29 @@ def extract_data_s3(BUCKET_NAME, KEY, OUTPUT_PATH, AWS_CONN_ID="aws_default"):
     """
     Extracts Parquet data from an S3 bucket,
     saves it locally, and returns the file path.
-    
     Args:
         BUCKET_NAME (str): Name of the S3 bucket.
         KEY (str): KEY (file path) of the Parquet file in S3.
         OUTPUT_PATH (str): Local path where the Parquet file should be saved.
         AWS_CONN_ID (str): Airflow connection ID for AWS (default: 'aws_default').
-
     Returns:
         str: Path to the saved local Parquet file.
     """
     try:
         # Use S3Hook to interact with AWS S3
         s3_hook = S3Hook(AWS_CONN_ID=AWS_CONN_ID)
-        
         # Download file from S3 to memory
         file_obj = s3_hook.get_key(KEY, BUCKET_NAME)
         if not file_obj:
             raise AirflowException(f"File {KEY} not found in bucket {BUCKET_NAME}")
-        
         file_content = file_obj.get()["Body"].read()
         buffer = BytesIO(file_content)
-        
         # Read Parquet data using PyArrow
         table = pq.read_table(buffer)
-        
         # Ensure output directory exists
         os.makedirs(os.path.dirname(OUTPUT_PATH), exist_ok=True)
-        
         # Save the Parquet file locally
         pq.write_table(table, OUTPUT_PATH)
-        
         return OUTPUT_PATH  # Return the path to the saved Parquet file
     except Exception as e:
         raise AirflowException(f"Failed to extract data from S3: {str(e)}")
