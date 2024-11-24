@@ -35,7 +35,7 @@ def extract_data_s3(BUCKET_NAME, KEY, OUTPUT_PATH, AWS_CONN_ID="aws_default"):
     Args:
         BUCKET_NAME (str): Name of the S3 bucket.
         KEY (str): KEY (file path) of the Parquet file in S3.
-        OUTPUT_PATH (str): Local path where 
+        OUTPUT_PATH (str): Local path where
         the Parquet file should be saved.
         AWS_CONN_ID (str): Airflow connection ID
         for AWS (default: 'aws_default').
