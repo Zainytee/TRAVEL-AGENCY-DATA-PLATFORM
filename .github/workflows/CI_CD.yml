@@ -1,0 +1,60 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches:
+      - master  # Trigger workflow on pushes to master branch
+  pull_request:
+    branches:
+      - master  # Trigger workflow on pull requests to the master branch
+
+jobs:
+  lint:
+    name: Code Linting
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.9"
+
+      - name: Install dependencies
+        run: |
+          pip install flake8
+
+      - name: Run Linter
+        run: |
+          flake8 . --count --show-source --statistics
+
+  build-and-push:
+  name: Build and Push Docker Image
+  runs-on: ubuntu-latest
+
+  needs: lint  
+
+  steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Login to Cloud Registry
+      env:
+        DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+        DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
+      run: |
+        echo "${DOCKER_PASSWORD}" | docker login -u "${DOCKER_USERNAME}" --password-stdin docker.io
+
+    - name: Build Docker image
+      run: |
+        docker build -t travel-agency-pipeline-image .
+
+    - name: Tag Docker image
+      run: |
+        docker tag travel-agency-pipeline-image:latest docker.io/${{ secrets.DOCKER_USERNAME }}/travel-agency-pipeline-image:CDE
+
+    - name: Push Docker image
+      run: |
+        docker push docker.io/${{ secrets.DOCKER_USERNAME }}/travel-agency-pipeline-image:CDE
