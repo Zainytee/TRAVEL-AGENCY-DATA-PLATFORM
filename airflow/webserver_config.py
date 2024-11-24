@@ -39,7 +39,8 @@ WTF_CSRF_TIME_LIMIT = None
 # AUTHENTICATION CONFIG
 # ----------------------------------------------------
 # For details on how to set up each of the following authentication, see
-# http://flask-appbuilder.readthedocs.io/en/latest/security.html# authentication-methods
+# http://flask-appbuilder.readthedocs.io/en/latest/security.html
+# authentication-methods
 # for details.
 
 # The authentication type
@@ -59,7 +60,8 @@ AUTH_TYPE = AUTH_DB
 # Will allow user self registration
 # AUTH_USER_REGISTRATION = True
 
-# The recaptcha it's automatically enabled for user self registration is active and the keys are necessary
+# The recaptcha it's automatically enabled for user 
+# self-registration is active and the keys are necessary
 # RECAPTCHA_PRIVATE_KEY = PRIVATE_KEY
 # RECAPTCHA_PUBLIC_KEY = PUBLIC_KEY
 
@@ -110,7 +112,8 @@ AUTH_TYPE = AUTH_DB
 # that you can use for Apache Airflow.
 # http://flask-appbuilder.readthedocs.io/en/latest/customizing.html#changing-themes
 # Please make sure to remove "navbar_color" configuration from airflow.cfg
-# in order to fully utilize the theme. (or use that property in conjunction with theme)
+# in order to fully utilize the theme.
+# (or use that property in conjunction with theme)
 # APP_THEME = "bootstrap-theme.css"  # default bootstrap
 # APP_THEME = "amelia.css"
 # APP_THEME = "cerulean.css"
