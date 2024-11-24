@@ -15,8 +15,8 @@ def transform_data(ti, **kwargs):
     table = pa.Table.from_pylist(data)
     # Define a temporary output file path
     output_file = (
-        "/mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project"
-        "/AIRFLOW_ORCHESTRATION/dags/tmp/transformed_data.parquet"
+        "/mnt/c/Users/zaina/Documents/Core_Data_Engineering/capstone_project/"
+        "AIRFLOW_ORCHESTRATION/dags/tmp/transformed_data.parquet"
     )
     # Write the table to a Parquet file with Snappy compression
     pq.write_table(table, output_file, compression="snappy")
@@ -24,11 +24,11 @@ def transform_data(ti, **kwargs):
     return output_file
 
 
-# Transforming S3 data for snowflake
+# Transforming S3 data for Snowflake
 input_file = (
     "/mnt/c/Users/zaina/Documents/Core_Data_Engineering/"
     "capstone_project/AIRFLOW_ORCHESTRATION/dags/tmp/data.parquet"
-    )
+)
 
 
 # Function to log completion message
@@ -52,8 +52,7 @@ def transform_data_s3(df):
             if isinstance(x, dict) else "Unknown"
         ),
         "Common_Native_Name": df["translations"].apply(
-            lambda x: x.get(
-                "nativeName", {}).get("common", "Unknown")
+            lambda x: x.get("nativeName", {}).get("common", "Unknown")
             if isinstance(x, dict) else "Unknown"
         ),
         "Currency_Code": df["currencies"].apply(
@@ -62,40 +61,42 @@ def transform_data_s3(df):
         ),
         "Currency_Name": df["currencies"].apply(
             lambda x: list(x.values())[0].get("name", "No Currency Name")
-        if isinstance(x, dict) and x and list(x.values())
-            and isinstance(list(x.values())[0], dict)
-        else "No Currency Name"
-
+            if (
+                isinstance(x, dict) and x and list(x.values()) and
+                isinstance(list(x.values())[0], dict)
+            )
+            else "No Currency Name"
         ),
-
         "Currency_Symbol": df["currencies"].apply(
             lambda x: list(x.values())[0].get("symbol", "No Currency Symbol")
-        if isinstance(x, dict) and x and list(x.values())
-            and isinstance(list(x.values())[0], dict) else "No Currency Symbol"
+            if (
+                isinstance(x, dict) and x and list(x.values()) and
+                isinstance(list(x.values())[0], dict)
+            )
+            else "No Currency Symbol"
         ),
         "Country_Code": df["idd"].apply(
             lambda x: f"{x.get('root', '')}{''.join(x.get('suffixes', []))}"
-        if isinstance(x, dict) and x.get('root') else "No Country Code"
+            if isinstance(x, dict) and x.get('root') else "No Country Code"
         ),
         "Capital": df["capital"].apply(
-            lambda x: x[0] if isinstance(x, list) and x and x[0] else "No Capital"
+            lambda x: x[0]
+            if isinstance(x, list) and x and x[0] else "No Capital"
         ),
         "Region": df["region"],
         "Sub_Region": df.get(
-            "subregion", pd.Series(["No Sub-Region"] * len(df))).apply(
+            "subregion", pd.Series(["No Sub-Region"] * len(df))
+        ).apply(
             lambda x: x if pd.notna(x) else "No Sub-Region"
         ),
         "Languages": df["languages"].apply(
-        lambda x: ", ".join([v for v in x.values() if isinstance(v, str)])
+            lambda x: ", ".join([v for v in x.values() if isinstance(v, str)])
             if isinstance(x, dict) else None
         ),
-
         "Area": df["area"],
-
         "Population": df["population"],
-
         "Continents": df["continents"].apply(
-            lambda x: ", ".join(x) 
+            lambda x: ", ".join(x)
             if isinstance(x, list) and x else "No Continents"
         ),
     })
@@ -130,5 +131,3 @@ def run_transformation(
     )
     # Return transformed data for XCom
     return transformed_data
-
-
