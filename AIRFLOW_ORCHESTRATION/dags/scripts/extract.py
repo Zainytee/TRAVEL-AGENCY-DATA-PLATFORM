@@ -46,7 +46,9 @@ def extract_data_s3(BUCKET_NAME, KEY, OUTPUT_PATH, AWS_CONN_ID="aws_default"):
         # Download file from S3 to memory
         file_obj = s3_hook.get_key(KEY, BUCKET_NAME)
         if not file_obj:
-            raise AirflowException(f"File {KEY} not found in bucket {BUCKET_NAME}")
+            raise AirflowException(
+                f"File {KEY} not found in bucket {BUCKET_NAME}"
+            )
         file_content = file_obj.get()["Body"].read()
         buffer = BytesIO(file_content)
         # Read Parquet data using PyArrow
