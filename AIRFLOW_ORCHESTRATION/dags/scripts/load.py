@@ -15,21 +15,24 @@ def load_data(ti, **kwargs):
     s3_file_path = kwargs["templates_dict"]["s3_key"]
     BUCKET_NAME = 'zainycap-bucket'
     try:
-        # Create an S3Hook instance
-        s3_hook = S3Hook(aws_conn_id='aws_default')
-        # Upload the file to S3 with dynamic file path
-        s3_hook.load_file(
-            filename=transformed_file_path,  # Path to the transformed file
-            KEY=s3_file_path,  # Path in S3, dynamically created with Jinja
-            BUCKET_NAME=BUCKET_NAME,
-            replace=True
-        )
-        logging.info(
-            f"File successfully uploaded to S3: s3://{BUCKET_NAME}/{s3_file_path}"
-        )
-    except Exception as e:
-        logging.error(f"Failed to upload file to S3: {e}")
-        raise
+    # Create an S3Hook instance
+    s3_hook = S3Hook(aws_conn_id='aws_default')
+    
+    # Upload the file to S3 with dynamic file path
+    s3_hook.load_file(
+        filename=transformed_file_path,  # Path to the transformed file
+        KEY=s3_file_path,               # Path in S3, dynamically created with Jinja
+        BUCKET_NAME=BUCKET_NAME,
+        replace=True
+    )
+    
+    logging.info(
+        f"File successfully uploaded to S3: "
+        f"s3://{BUCKET_NAME}/{s3_file_path}"
+    )
+except Exception as e:
+    logging.error(f"Failed to upload file to S3: {e}")
+    raise
 # Loading file from S3 Bucket to Snowflake Database
 # Set up logging
 
