@@ -22,8 +22,10 @@ def load_data(ti, **kwargs):
 
         # Upload the file to S3 with dynamic file path
         s3_hook.load_file(
-            filename=transformed_file_path,  # Path to the transformed file
-            key=s3_file_path,                # Path in S3, dynamically created with Jinja
+            # Path to the transformed file
+            filename=transformed_file_path,
+            # Path in S3, dynamically created with Jinja
+            key=s3_file_path,
             bucket_name=BUCKET_NAME,
             replace=True
         )
@@ -48,7 +50,8 @@ def load_data_to_snowflake(
         table_name (str): Target Snowflake table name.
         schema_name (str): Snowflake schema name.
         snowflake_conn_id (str): Airflow connection ID for Snowflake.
-        unique_column (str): The unique column name for identifying duplicate records.
+        unique_column (str): The unique column name
+        for identifying duplicate records.
     Returns:
         None
     """
