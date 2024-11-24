@@ -24,7 +24,7 @@ def transform_data(ti, **kwargs):
     return output_file
 
 
-#Transforming S3 data for snowflake
+# Transforming S3 data for snowflake
 input_file = (
     "/mnt/c/Users/zaina/Documents/Core_Data_Engineering/"
     "capstone_project/AIRFLOW_ORCHESTRATION/dags/tmp/data.parquet"
@@ -37,7 +37,8 @@ def log_transformation_complete():
 
 
 def transform_data_s3(df):
-    # Transformation logic with additional checks for None or empty dictionaries
+    # Transformation logic with additional
+    # checks for None or empty dictionaries
     transformed_df = pd.DataFrame({
         "Country_Name": df["name"].apply(
             lambda x: x.get("common", "Unknown")
@@ -52,42 +53,40 @@ def transform_data_s3(df):
         ),
         "Common_Native_Name": df["translations"].apply(
             lambda x: x.get(
-                "nativeName", {}).get("common", "Unknown") 
+                "nativeName", {}).get("common", "Unknown")
             if isinstance(x, dict) else "Unknown"
         ),
         "Currency_Code": df["currencies"].apply(
-            lambda x: list(x.keys())[0] 
+            lambda x: list(x.keys())[0]
             if isinstance(x, dict) and x else None
         ),
         "Currency_Name": df["currencies"].apply(
-            lambda x: list(x.values())[0].get("name", "No Currency Name") 
-        if isinstance(x, dict) and x and list(x.values()) 
-            and isinstance(list(x.values())[0], dict) 
+            lambda x: list(x.values())[0].get("name", "No Currency Name")
+        if isinstance(x, dict) and x and list(x.values())
+            and isinstance(list(x.values())[0], dict)
         else "No Currency Name"
 
         ),
 
         "Currency_Symbol": df["currencies"].apply(
-            lambda x: list(x.values())[0].get("symbol", "No Currency Symbol") 
-            if isinstance(x, dict) and x and list(x.values()) 
+            lambda x: list(x.values())[0].get("symbol", "No Currency Symbol")
+        if isinstance(x, dict) and x and list(x.values())
             and isinstance(list(x.values())[0], dict) else "No Currency Symbol"
         ),
         "Country_Code": df["idd"].apply(
-            lambda x: f"{x.get('root', '')}{''.join(x.get('suffixes', []))}" 
-            if isinstance(x, dict) and x.get('root') else "No Country Code"
+            lambda x: f"{x.get('root', '')}{''.join(x.get('suffixes', []))}"
+        if isinstance(x, dict) and x.get('root') else "No Country Code"
         ),
         "Capital": df["capital"].apply(
             lambda x: x[0] if isinstance(x, list) and x and x[0] else "No Capital"
         ),
         "Region": df["region"],
-
         "Sub_Region": df.get(
             "subregion", pd.Series(["No Sub-Region"] * len(df))).apply(
             lambda x: x if pd.notna(x) else "No Sub-Region"
         ),
-
         "Languages": df["languages"].apply(
-        lambda x: ", ".join([v for v in x.values() if isinstance(v, str)]) 
+        lambda x: ", ".join([v for v in x.values() if isinstance(v, str)])
             if isinstance(x, dict) else None
         ),
 
@@ -96,13 +95,16 @@ def transform_data_s3(df):
         "Population": df["population"],
 
         "Continents": df["continents"].apply(
-            lambda x: ", ".join(x) if isinstance(x, list) and x else "No Continents"
+            lambda x: ", ".join(x) 
+            if isinstance(x, list) and x else "No Continents"
         ),
     })
     return transformed_df
 
 
-def run_transformation(load_function, table_name, schema_name, snowflake_conn_id):
+def run_transformation(
+    load_function, table_name, schema_name, snowflake_conn_id
+):
     """
     Transforms the data and loads it into Snowflake.
     Args:
@@ -126,7 +128,7 @@ def run_transformation(load_function, table_name, schema_name, snowflake_conn_id
         snowflake_conn_id=snowflake_conn_id,
         unique_column="Country_Name"
     )
-     # Return transformed data for XCom
+    # Return transformed data for XCom
     return transformed_data
 
 
