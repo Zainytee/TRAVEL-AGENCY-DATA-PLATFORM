@@ -9,7 +9,7 @@ def load_data(ti, **kwargs):
     """
     Load the transformed data to S3.
     """
-    # Get the transformed data file path from XCom 
+    # Get the transformed data file path from XCom
     transformed_file_path = ti.xcom_pull(task_ids="transform_data")
     # Use the templated s3_key passed from the DAG
     s3_file_path = kwargs["templates_dict"]["s3_key"]
@@ -25,8 +25,8 @@ def load_data(ti, **kwargs):
             replace=True
         )
         logging.info(
-    f"File successfully uploaded to S3: s3://{BUCKET_NAME}/{s3_file_path}"
-)
+            f"File successfully uploaded to S3: s3://{BUCKET_NAME}/{s3_file_path}"
+        )
     except Exception as e:
         logging.error(f"Failed to upload file to S3: {e}")
         raise
@@ -35,7 +35,7 @@ def load_data(ti, **kwargs):
 
 
 def load_data_to_snowflake(
-    transformed_data, TABLE_NAME, SCHEMA_NAME, 
+    transformed_data, TABLE_NAME, SCHEMA_NAME,
     SNOWFLAKE_CONN_ID, UNIQUE_COLUMN
 ):
     """
@@ -45,7 +45,7 @@ def load_data_to_snowflake(
         TABLE_NAME (str): Target Snowflake table name.
         SCHEMA_NAME (str): Snowflake schema name.
         SNOWFLAKE_CONN_ID (str): Airflow connection ID for Snowflake.
-        UNIQUE_COLUMN (str): The unique column name 
+        UNIQUE_COLUMN (str): The unique column name
         for identifying duplicate records.
     Returns:
         None
@@ -58,9 +58,9 @@ def load_data_to_snowflake(
         rows = [tuple(record) for record in transformed_data.to_numpy()]
         # Check if the table exists in Snowflake
         check_table_query = f"""
-        SELECT COUNT(*) 
-        FROM information_schema.tables 
-        WHERE table_schema = '{SCHEMA_NAME.upper()}' 
+        SELECT COUNT(*)
+        FROM information_schema.tables
+        WHERE table_schema = '{SCHEMA_NAME.upper()}'
         AND TABLE_NAME = '{TABLE_NAME.upper()}';
         """
         result = snowflake_hook.get_first(check_table_query)
@@ -98,7 +98,7 @@ def load_data_to_snowflake(
         MERGE INTO {SCHEMA_NAME}.{TABLE_NAME} AS target
         USING {SCHEMA_NAME}.{temp_table} AS source
         ON target.{UNIQUE_COLUMN} = source.{UNIQUE_COLUMN}
-        WHEN MATCHED THEN 
+        WHEN MATCHED THEN
             UPDATE SET {', '.join(
                 [f"target.{col} = source.{col}" for col in columns]
             )}
