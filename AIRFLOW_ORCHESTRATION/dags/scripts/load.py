@@ -1,5 +1,3 @@
-import boto3
-#from io import BytesIO
 import logging
 from airflow.providers.amazon.aws.hooks.s3 import S3Hook
 from airflow.providers.snowflake.hooks.snowflake import SnowflakeHook
@@ -8,19 +6,15 @@ logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 
-
-
 def load_data(ti, **kwargs):
     """
     Load the transformed data to S3.
     """
     # Get the transformed data file path from XCom 
     transformed_file_path = ti.xcom_pull(task_ids="transform_data")
-    
     # Use the templated s3_key passed from the DAG
     s3_file_path = kwargs["templates_dict"]["s3_key"]
     BUCKET_NAME = 'zainycap-bucket'
-
     try:
         # Create an S3Hook instance
         s3_hook = S3Hook(aws_conn_id='aws_default')
@@ -37,7 +31,6 @@ def load_data(ti, **kwargs):
     except Exception as e:
         logging.error(f"Failed to upload file to S3: {e}")
         raise
-
 
 
 #Loading file from S3 Bucket to Snowflake Database
