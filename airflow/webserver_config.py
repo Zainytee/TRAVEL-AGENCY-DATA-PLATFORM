@@ -60,7 +60,7 @@ AUTH_TYPE = AUTH_DB
 # Will allow user self registration
 # AUTH_USER_REGISTRATION = True
 
-# The recaptcha it's automatically enabled for user 
+# The recaptcha it's automatically enabled for user
 # self-registration is active and the keys are necessary
 # RECAPTCHA_PRIVATE_KEY = PRIVATE_KEY
 # RECAPTCHA_PUBLIC_KEY = PUBLIC_KEY
