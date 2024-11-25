@@ -73,7 +73,7 @@ The architecture integrates modern tools to streamline the ETL process:
 
 Below is the **Data Architecture Diagram** that illustrates the end-to-end flow of the data pipeline:
 
-![Data Architecture](assets/DATA ARCHITECTURE.drawio (3).png)
+![Data Architecture](assets/DATA_ARCHITECTURE.png)
 
 1. **Extract**: 
    - Use **Apache Airflow** to fetch raw data from the **Country REST API** and store it in an **S3 bucket** in **Parquet format**.
