@@ -1,0 +1,30 @@
+
+version: 2
+
+models:
+  - name: dim_countries
+    description: "A dimension table for countries"
+    columns:
+      - name: country_name
+        description: "The primary key for this table"
+        data_tests:
+          - unique
+          - not_null
+
+  - name: dim_currencies
+    description: "A dimension for currency "
+    columns:
+      - name: currency_code
+        description: "The primary key for this table"
+        data_tests:
+          - unique
+          - not_null
+
+  - name: fact_countries
+    description: "A fact table for countries "
+    columns:
+      - name: country_name
+        description: "The primary key for this table"
+        data_tests:
+          - unique
+          - not_null

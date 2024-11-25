@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: staging_country_data
+    schema: staging  # Replace with your actual schema name
+    tables:
+      - name: country_data
+        description: "Table containing country data, including name, region, population, etc."
