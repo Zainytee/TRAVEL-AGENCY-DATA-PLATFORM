@@ -5,7 +5,7 @@ FROM python:3.10-slim
 WORKDIR /scripts
 
 # Copy dependencies and install them
-COPY requirements.txt .
+COPY AIRFLOW_ORCHESTRATION/requirements.txt . 
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy all scripts
