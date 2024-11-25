@@ -31,30 +31,33 @@ jobs:
           flake8 . --count --show-source --statistics
 
   build-and-push:
-  name: Build and Push Docker Image
-  runs-on: ubuntu-latest
+    name: Build and Push Docker Image
+    runs-on: ubuntu-latest
+    needs: lint  # Ensures linting job passes before this job runs
 
-  needs: lint  
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
 
-  steps:
-    - name: Checkout code
-      uses: actions/checkout@v3
+      - name: Login to Cloud Registry
+        env:
+          DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+          DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
+        run: |
+          echo "${DOCKER_PASSWORD}" | docker login -u "${DOCKER_USERNAME}" --password-stdin docker.io || exit 1
 
-    - name: Login to Cloud Registry
-      env:
-        DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
-        DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
-      run: |
-        echo "${DOCKER_PASSWORD}" | docker login -u "${DOCKER_USERNAME}" --password-stdin docker.io
+      - name: Verify Docker installation
+        run: |
+          docker --version
 
-    - name: Build Docker image
-      run: |
-        docker build -t travel-agency-pipeline-image .
+      - name: Build Docker image
+        run: |
+          docker build -t travel-agency-pipeline-image:latest .
 
-    - name: Tag Docker image
-      run: |
-        docker tag travel-agency-pipeline-image:latest docker.io/${{ secrets.DOCKER_USERNAME }}/travel-agency-pipeline-image:CDE
+      - name: Tag Docker image
+        run: |
+          docker tag travel-agency-pipeline-image:latest docker.io/${{ secrets.DOCKER_USERNAME }}/travel-agency-pipeline-image:CDE
 
-    - name: Push Docker image
-      run: |
-        docker push docker.io/${{ secrets.DOCKER_USERNAME }}/travel-agency-pipeline-image:CDE
+      - name: Push Docker image
+        run: |
+          docker push docker.io/${{ secrets.DOCKER_USERNAME }}/travel-agency-pipeline-image:CDE
