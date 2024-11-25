@@ -52,7 +52,7 @@ jobs:
 
       - name: Build Docker image
         run: |
-          docker build -t travel-agency-pipeline-image:latest .
+          docker build -t travel-agency-pipeline-image:latest -f AIRFLOW_ORCHESTRATION/Dockerfile .
 
       - name: Tag Docker image
         run: |
